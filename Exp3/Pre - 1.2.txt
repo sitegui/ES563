@@ -1,0 +1,30 @@
+Ensaio de Curto-Circuito
+
+
+Para a aplicação desse ensaio, a escolha do enrolamento a ser curto-circuitado é normalmente determinada 
+pelos equipamentos de medição disponíveis para uso no teste. Por conveniência, normalmente o lado de alta-tensão é 
+escolhido como primário, de forma que o curto circuito é realizado no lado de baixa-tensão(secundário).
+Uma tensão crescente é aplicada no lado de alta até que se atinja a corrente nominal(medida no primário).
+
+
+Esse teste é usado para determinar as resistências ohmicas(Req) e as reatâncias de dispersão(Xeq), as quais são responsáveis pelas 
+perdas nos enrolamentos, permitindo, assim, conhecerem-se as características de desempenho do transformador.
+
+Aplicando-se o teste como descrito acima, medem-se a Tensão Eficaz no Primário(Vcc), a Corrente Eficaz no Primário(Icc) e a Potência(Pcc, medida com o wattímetro no primário).
+Então:
+
+
+|Zeq| = Vcc/Icc
+Req = Pcc/(Icc^2)
+Xeq = (|Zeq|^2 - Req^2)^(1/2)
+
+Estes parâmetros são referentes ao circuito equivalente visto do primário(lado de alta-tensão).
+Para sabermos os parâmetros do secundário(lado de baixa), basta dividirmos cada um deles por n^2.
+
+n = (numero de espiras do primario)/(numero de espiras do secundario)
+
+
+
+
+
+

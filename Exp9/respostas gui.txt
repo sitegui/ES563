@@ -1,0 +1,31 @@
+﻿Q3 e Q4
+
+<<<Na real não sei a diferença da Q3 pra Q4>>>
+
+Km = Ke = Rh * I0 / Ω0 = 0.72 * 1.5 / 415.7 = 0.002598
+D = Km * Ireg / Ωreg = 0.002598 * 7.91 / 281.9 = 0.0000729
+J = D * tM = 0.0000729 * 5.5 = 0.0004
+
+Q5
+I0 = 1.5 A
+Ω0 = 415.7 rad/s
+I = 7.91 A
+Ω = 281.9 rad/s
+ΔI = I - I0 = 6.41 A
+ΔΩ = Ω0 - Ω = 133.8 rad/s
+M = sqrt((Ω0 * ΔI) / (I0 * ΔΩ) + 1) = 3.7785
+ηmax = (M-1)/(M+1) = 0.58145
+Ω* = (M/M+1) * Ω0 = 831.4 rad/s
+Pin* = M * V0 * I0 = 85.015 W
+Pout* = M*(M-1)/(M+1) * V0 * I0 = 49.432 W
+T* = (M-1)/Ω0 * V0 * I0 = 0.15039 Nm
+
+Pós Q1
+Para que haja máxima transferência de energia do motor para a carga, as duas inércias deveriam ser
+iguais: JM/m^2 = JL
+
+No caso, com JL = 4 * JM,
+
+m^2 = JM/JL = 1/4
+
+m = 1/2

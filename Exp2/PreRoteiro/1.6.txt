@@ -1,0 +1,4 @@
+Tefp = 152,9V
+TefRL = 74,9V
+IefFonte = 5,16A
+IefEnroP = 3,75A

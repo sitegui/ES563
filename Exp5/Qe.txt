@@ -1,0 +1,19 @@
+No paralelo, sem a resistência em série com a armadura(resistência de armadura desprezível),
+há uma aparente "trepidação", isto é, a velocidade tem um caráter bastante instável,
+oscilando ao redor do ponto de estabilização com uma frequência relativamente alta assim que o motor
+é acionado.
+
+Adicionando-se uma resistência em série com a resistência de campo, o único efeito significativo verificado 
+é o deslocamento do ponto [do valor da velocidade] onde ocorre a estabilização ao atingir o regime permanente.
+Este ponto é proporcional ao aumento dessa resistência, o que faz sentido, 
+pois uma corrente maior se deslocará para a armadura.
+
+De outra forma, adicionar uma resistência em série com a de armadura faz com que a velocidade 
+se estabilize de uma forma mais "tranquila", sem grandes oscilações. Nesta configuração, o efeito de uma 
+resistência de armadura ainda maior não desloca o ponto de estabilização da velocidade, 
+mas diminui o "overshooting" inicial, apesar da velocidade em regime ser menor em relação 
+a resistência de armadura desprezível.
+
+
+Nos dois casos discutidos, a velocidade diminui linearmente com a entrada da carga linear, como era
+de se esperar.

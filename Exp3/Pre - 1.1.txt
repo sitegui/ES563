@@ -1,0 +1,12 @@
+Ensaio de circuito aberto
+
+No teste de circuito aberto, o lado do secundário é deixado em aberto e a tensão nominal é aplicada no primário. Nessas condições, uma corrente excitadora muito pequena é obtida. A impedância de circuito aberto visto pelo lado do primário é:
+
+Zeq = R1 + j X1 + Zn = R1 + j X1 + (Rc // j Xm)
+
+Como a queda de tensão devido à perdas no primário é pequena, pode-se admitir que toda a queda de tensão ocorre no núcleo do transformador.
+
+Ao medir a tensão aplicada (V), corrente de excitação (I) e a potência (P), pode-se encontrar Rc e Xm:
+
+Rc = V²/P
+|Zn| = V/I = |Rc // j Xm| -> obtendo Xm

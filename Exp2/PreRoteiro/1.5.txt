@@ -1,0 +1,13 @@
+Z1 = (n^2).Z2:
+
+X21 = X2.(2/1)^2 = (4.14e-3)x4 = 0.01656 H
+R21 = 0.08x4 = 0.32ohm
+RL1 = 9,96x4 = 39,84ohm
+
+TefP = TefV1 = 155,5V
+TefRL1 = 151V
+TefR1 = 0,3V
+TefX1 = 8,35V
+TefR21 = 1,2V
+TefX21 = 23,6V
+Queda Tensão R. Dispersão Primario(Eficaz) = TefR1 + TefX1 + TefR21 + TefX21 = 33,45V

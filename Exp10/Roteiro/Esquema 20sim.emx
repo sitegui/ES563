@@ -1,0 +1,2899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+ <Model version="4.5" build="4.5.1.5561">
+  <Sidops><![CDATA[model 128 184
+ description '<Information>
+ <Description>
+    <Version>4.5</Version>
+<IsMainModel>0</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+    <LibraryPath>C:\Users\luiz\Dropbox\ES563\NovosRoteiros2015\MotorDeInduc3F_RefFrame.emx</LibraryPath>
+  <TimeStamp>2015-5-15 22:14:53</TimeStamp>
+</Description>
+</Information>';
+ type Mainmodel
+ end;
+ implementation bg
+  submodels
+   Gain3P4 192 832
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>3P/4</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 176.1 816 207.9 848 fill 15132390;
+      text 'K' 192 832 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   GainP2 192 888
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>P/2</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 176.1 872 207.9 904 fill 15132390;
+      text 'K' 192 888 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   LRM_1 152 128
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>LRM</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 136.1 112 167.9 144 fill 15132390;
+      text 'K' 152 128 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   LRM_2 488 64
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>LRM</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 472.1 48 503.9 80 fill 15132390;
+      text 'K' 488 64 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   LRM_3 128 520
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>LRM</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 112.1 504 143.9 536 fill 15132390;
+      text 'K' 128 520 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   LRM_4 488 464
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>LRM</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg top
+     figures
+      rectangle 472.1 448 503.9 480 fill 15132390;
+      text 'K' 488 464 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   LSM_1 488 128
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>LSM</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 472.1 112 503.9 144 fill 15132390;
+      text 'K' 488 128 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   LSM_4 488 520
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>LSM</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 472.1 504 503.9 536 fill 15132390;
+      text 'K' 488 520 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   Mrr_1 336 248
+    description '<Information></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg top
+     figures
+      rectangle 368.1 256 399.9 288 fill 15132390;
+      text 'K' 384 272 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   Mrr_2 384 664
+    description '<Information></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg top
+     figures
+      rectangle 368.1 648 399.9 680 fill 15132390;
+      text 'K' 384 664 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   Mrs_1 384 176
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>Mrs</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg top
+     figures
+      rectangle 320.1 232 351.9 264 fill 15132390;
+      text 'K' 336 248 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   Mrr_2 336 640
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Description>Mrr</Description><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg top
+     figures
+      rectangle 320.1 624 351.9 656 fill 15132390;
+      text 'K' 336 640 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   Mrs_1 336 176
+    description '<Information><Description><Version>No Version Info</Version><IsMainModel>0</IsMainModel><KeepParameterValues>False</KeepParameterValues><AllowLibraryUpdate>True</AllowLibraryUpdate><Description>Mrs</Description><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 320.1 160 351.9 192 fill 15132390;
+      text 'K' 336 176 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   Mrs_2 336 568
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>Mrs</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 320.1 552 351.9 584 fill 15132390;
+      text 'K' 336 568 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   MultiplyDivide 576 328
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\MultiplyDivide.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:14:59</TimeStamp>
+</Description>';
+    knot MultiplyDivide
+     ports
+      signal knot duplicatable in multiply [1];
+      signal knot duplicatable in divide [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 568 320 584 336 fill 16777215;
+    end;
+    implementation eq
+equations
+	output = mul (collect (multiply)) ./ mul (collect (divide));
+     implementation_end;
+   MultiplyDivide1 616 488
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\MultiplyDivide.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:14:59</TimeStamp>
+</Description>';
+    knot MultiplyDivide
+     ports
+      signal knot duplicatable in multiply [1];
+      signal knot duplicatable in divide [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 608 480 624 496 fill 16777215;
+    end;
+    implementation eq
+equations
+	output = mul (collect (multiply)) ./ mul (collect (divide));
+     implementation_end;
+   MultiplyDivide2 376 792
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\MultiplyDivide.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:14:59</TimeStamp>
+</Description>';
+    knot MultiplyDivide
+     ports
+      signal knot duplicatable in multiply [1];
+      signal knot duplicatable in divide [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 368 784 384 800 fill 16777215;
+    end;
+    implementation eq
+equations
+	output = mul (collect (multiply)) ./ mul (collect (divide));
+     implementation_end;
+   MultiplyDivide3 408 792
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\MultiplyDivide.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:14:59</TimeStamp>
+</Description>';
+    knot MultiplyDivide
+     ports
+      signal knot duplicatable in multiply [1];
+      signal knot duplicatable in divide [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 400 784 416 800 fill 16777215;
+    end;
+    implementation eq
+equations
+	output = mul (collect (multiply)) ./ mul (collect (divide));
+     implementation_end;
+   M_1 152 296
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>M</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 136.1 280 167.9 312 fill 15132390;
+      text 'K' 152 296 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   M_2 488 296
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>M</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg top
+     figures
+      rectangle 472.1 280 503.9 312 fill 15132390;
+      text 'K' 488 296 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   M_3 128 688
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>M</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 112.1 672 143.9 704 fill 15132390;
+      text 'K' 128 688 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   M_4 488 712
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>M</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg top
+     figures
+      rectangle 472.1 696 503.9 728 fill 15132390;
+      text 'K' 488 712 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   M_5 280 752
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>M</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 264.1 736 295.9 768 fill 15132390;
+      text 'K' 280 752 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   M_6 248 832
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>M</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 232.1 816 263.9 848 fill 15132390;
+      text 'K' 248 832 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   M_7 280 360
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram\Gain.emx</LibraryPath><TimeStamp>2007-9-26 12:15:12</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration><Description>M</Description></Description></Information>';
+    type Gain
+     ports
+      signal in input;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 264.1 344 295.9 376 fill 15132390;
+      text 'K' 280 360 color 16711680 16 bold;
+    end;
+    implementation eq
+parameters
+	real K = 1.0;		// gain
+equations
+	output = K * input;
+    implementation_end;
+   PlusMinus 224 128
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 216 120 232 136 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PlusMinus1 200 296
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 192 288 208 304 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PlusMinus2 208 520
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 200 512 216 528 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PlusMinus3 176 688
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 168 680 184 696 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PlusMinus4 544 296
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 536 288 552 304 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PlusMinus5 544 520
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 536 512 552 528 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PlusMinus6 376 832
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 368 824 384 840 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PlusMinus7 136 888
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 128 880 144 896 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   Sine 64 128
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Sources\WaveGenerator-Sine.emx</LibraryPath>
+  <TimeStamp>2007-9-27 16:12:6</TimeStamp>
+</Description>';
+    type 'WaveGenerator-Sine'
+     ports
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      group
+       rectangle 48 112 80 144 fill 15132390;
+       line 52.5 118.4 52.5 137.6;
+       line 78.1 128 49.3 128;
+       spline 52.9 127.9 56.1 119.8 59.3 127.9 62.6 136 65.7 127.9 68.8 119.8 72.1 127.9 75.6 136.2 78.8 128.2 color 16711680;
+      end;
+    end;
+    implementation eq
+parameters
+	real amplitude = 1.0;			// amplitude of the wave
+	real omega = 1.0 {rad/s};		// angular frequency of the wave
+variables
+	boolean hidden change;
+	real hidden half;
+equations
+	"calculate at least 2 points per cycle to get a triangle"
+	half = pi / omega;
+	change = frequencyevent (half, half / 2);
+
+	"calculate the sine wave"
+	output = amplitude * sin ( omega * time);
+implementation_end;
+   Sine1 48 520
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Sources\WaveGenerator-Sine.emx</LibraryPath>
+  <TimeStamp>2007-9-27 16:12:6</TimeStamp>
+</Description>';
+    type 'WaveGenerator-Sine'
+     ports
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      group
+       rectangle 32 504 64 536 fill 15132390;
+       line 36.5 510.4 36.5 529.6;
+       line 62.1 520 33.3 520;
+       spline 36.9 519.9 40.1 511.8 43.3 519.9 46.6 528 49.7 519.9 52.8 511.8 56.1 519.9 59.6 528.2 62.8 520.2 color 16711680;
+      end;
+    end;
+    implementation eq
+parameters
+	real amplitude = 1.0;			// amplitude of the wave
+	real omega = 1.0 {rad/s};		// angular frequency of the wave
+variables
+	boolean hidden change;
+	real hidden half;
+equations
+	"calculate at least 2 points per cycle to get a triangle"
+	half = pi / omega;
+	change = frequencyevent (half, half / 2);
+
+	"calculate the sine wave"
+	output = amplitude * sin ( omega * time);
+implementation_end;
+   Sine2 56 888
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Sources\WaveGenerator-Sine.emx</LibraryPath>
+  <TimeStamp>2007-9-27 16:12:6</TimeStamp>
+</Description>';
+    type 'WaveGenerator-Sine'
+     ports
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      group
+       rectangle 40 872 72 904 fill 15132390;
+       line 44.5 878.4 44.5 897.6;
+       line 70.1 888 41.3 888;
+       spline 44.9 887.9 48.1 879.8 51.3 887.9 54.6 896 57.7 887.9 60.8 879.8 64.1 887.9 67.6 896.2 70.8 888.2 color 16711680;
+      end;
+    end;
+    implementation eq
+parameters
+	real amplitude = 1.0;			// amplitude of the wave
+	real omega = 1.0 {rad/s};		// angular frequency of the wave
+variables
+	boolean hidden change;
+	real hidden half;
+equations
+	"calculate at least 2 points per cycle to get a triangle"
+	half = pi / omega;
+	change = frequencyevent (half, half / 2);
+
+	"calculate the sine wave"
+	output = amplitude * sin ( omega * time);
+implementation_end;
+   Splitter 336 128
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 332.8 124.8 339.2 131.2 color -1 fill 0;
+      ellipse 331.7 123.7 340.3 132.3 color -1;
+     terminals
+      input 336 128 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter1 336 296
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 332.8 292.8 339.2 299.2 color -1 fill 0;
+      ellipse 331.7 291.7 340.3 300.3 color -1;
+     terminals
+      input 336 296 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter10 408 520
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 404.8 516.8 411.2 523.2 color -1 fill 0;
+      ellipse 403.7 515.7 412.3 524.3 color -1;
+     terminals
+      input 408 520 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter11 440 296
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 436.8 292.8 443.2 299.2 color -1 fill 0;
+      ellipse 435.7 291.7 444.3 300.3 color -1;
+     terminals
+      input 440 296 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter12 656 488
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 652.8 484.8 659.2 491.2 color -1 fill 0;
+      ellipse 651.7 483.7 660.3 492.3 color -1;
+     terminals
+      input 656 488 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter16 616 360
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 612.8 356.8 619.2 363.2 color -1 fill 0;
+      ellipse 611.7 355.7 620.3 364.3 color -1;
+     terminals
+      input 616 360 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter17 576 464
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 572.8 460.8 579.2 467.2 color -1 fill 0;
+      ellipse 571.7 459.7 580.3 468.3 color -1;
+     terminals
+      input 576 464 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter2 104 128
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 100.8 124.8 107.2 131.2 color -1 fill 0;
+      ellipse 99.7 123.7 108.3 132.3 color -1;
+     terminals
+      input 104 128 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter3 336 520
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 332.8 516.8 339.2 523.2 color -1 fill 0;
+      ellipse 331.7 515.7 340.3 524.3 color -1;
+     terminals
+      input 336 520 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter4 336 688
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 332.8 684.8 339.2 691.2 color -1 fill 0;
+      ellipse 331.7 683.7 340.3 692.3 color -1;
+     terminals
+      input 336 688 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter5 80 520
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 76.8 516.8 83.2 523.2 color -1 fill 0;
+      ellipse 75.7 515.7 84.3 524.3 color -1;
+     terminals
+      input 80 520 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter8 336 712
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 332.8 708.8 339.2 715.2 color -1 fill 0;
+      ellipse 331.7 707.7 340.3 716.3 color -1;
+     terminals
+      input 336 712 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   Splitter9 376 128
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>Signal\Block Diagram\Splitter.emx</LibraryPath>
+  <TimeStamp>2008-01-17 11:28:29</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Splitter
+     ports
+      signal knot duplicatable out output [1];
+      signal knot in input [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 372.8 124.8 379.2 131.2 color -1 fill 0;
+      ellipse 371.7 123.7 380.3 132.3 color -1;
+     terminals
+      input 376 128 fixed;
+    end;
+    implementation eq
+equations
+    collect (output) = input;
+implementation_end;
+   TransferFunction 280 128
+			specifications active 'FO'
+				specification 'FO'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Description>1 / [ s ( LSM LRM - M^2) + LRM rs]</Description><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg top
+  figures
+   rectangle 256 111.4 304 144.6 fill 15132390;
+   text 'k' 281.1 119.1 color 16711680 14;
+   line 261.7 129 299.4 129 color 16711680 fill 15132390;
+   text 't' 274.7 135.7 color 16711680 'SymbolProp BT' 15;
+   text 's    + 1' 280 135.7 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;		// gain []
+    real tau = 1;		// time constant [s / rad]
+variables
+    real rate, state;
+equations
+    rate = (k * input - state) / tau;
+    state = int (rate);
+    output = state;                    implementation_end;
+specification_end;
+				specification 'FOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96 216 128 fill 15132390;
+   group
+    text 't' 176.5 118.8 color 16711680 'SymbolProp BT' 15;
+    text 's    + 1' 184 118.8 color 16711680 14;
+   end;
+   line 155.5 114 210.9 114 color 16711680 fill 15132390;
+   group
+    text 'L' 187.2 108.2 color 16711680 11;
+    text 't' 181.3 105 color 16711680 'SymbolProp BT' 15;
+   end;
+   text 'k' 160.5 105.5 color 16711680 14;
+   text '(s    + 1)' 188.8 105 color 16711680 14;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lead time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tau );
+	output = state + ( tauL/tau ) * rate;  implementation_end;
+specification_end;
+				specification 'FOLA'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96.5 216 128.5 fill 15132390;
+   line 156.6 113.5 211.9 113.5 color 16711680 fill 15132390;
+   group
+    text 'k' 160.5 105 color 16711680 14;
+    text '(s    + 1)' 187.7 104.4 color 16711680 14;
+    text 't' 180.3 104.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text 's    + 1' 182.4 119.4 color 16711680 14;
+    text 't' 173.9 119.4 color 16711680 'SymbolProp BT' 15;
+    text 'L' 179.7 122.6 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lag time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tauL );
+	output = state + ( tau/tauL ) * rate;  implementation_end;
+specification_end;
+				specification 'SOI'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 160 97 208 128 fill 15132390;
+   text 'k' 187.2 104 color 16711680 14;
+   line 163.2 112.5 202.7 112.5 color 16711680 fill 15132390;
+   group
+    text 's(s  + 1)' 184 118.4 color 16711680 14;
+    text 't' 181.9 118.4 color 16711680 'SymbolProp BT' 15;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+ 	real tau = 1;		// time constant [s / rad]
+variables
+    real hidden rate1, state1;
+    real rate2,state2;
+equations
+	rate1 = ( k * input );
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau;
+	state2 = int(rate2);
+	output = state2;                        implementation_end;
+specification_end;
+				specification 'SOO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.6 232 128.6 fill 15132390;
+   group
+    text 't' 198.4 117.9 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.1 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 117.9 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.1 color 16711680 11;
+   end;
+   line 140.8 112.1 226.1 112.1 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 117.9 color 16711680 14;
+   text '(s    + 1)' 205.9 117.9 color 16711680 14;
+   text 'k' 183.5 103.3 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s / rad]
+	real tau2 = 1;		// time constant 2 [s / rad]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state1) / tau1;
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau2;
+	state2 = int(rate2);
+	output = state2;                         implementation_end;
+specification_end;
+				specification 'SOOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 97.3 232 129.3 fill 15132390;
+   group
+    text 't' 198.4 118.1 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.3 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 118.1 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.2 color 16711680 11;
+   end;
+   text 'k' 159.5 103.7 color 16711680 14;
+   line 140.8 112.2 226.1 112.2 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 118.1 color 16711680 14;
+   text '(s    + 1)' 205.9 118.1 color 16711680 14;
+   group
+    text '(s    + 1)' 187.7 103.7 color 16711680 14;
+    text 't' 180.3 103.7 color 16711680 'SymbolProp BT' 15;
+    text 'L' 185.1 106.9 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s ]
+	real tau2 = 1;		// time constant 2 [s ]
+	real tauL = 2;		// lead time [s]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = state2/k - input;
+	state1 = int (rate1);
+	rate2 = k/(tau1*tau2) * ( tauL*input - state1 - state2*(tau1+tau2)/k );
+	state2 = int(rate2);
+	output = state2;             implementation_end;
+specification_end;
+				specification 'SOU'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2011-3-23 10:32:13</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 200 511.7 296 543.7 fill 15132390;
+   line 204.8 527.2 290.1 527.2 color 16711680 fill 15132390;
+   text 's  + 2     s  + 1' 254.3 535.7 color 16711680 14;
+   text 'z' 251.4 536.8 color 16711680 'SymbolProp BT' 11 symbol;
+   text '2' 216.4 532 color 16711680 11;
+   text 't' 210 535.7 color 16711680 'SymbolProp BT' 15;
+   text 't' 258.5 535.7 color 16711680 'SymbolProp BT' 15;
+   text 'k' 248.4 519.2 color 16711680 14;
+   text '2' 228.4 532 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1;			// gain []
+    	real tau = 1;		// time constant [s ]
+	real zeta = 0.7;		// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2) / tau;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)/tau;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+				specification 'SOUO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.1 232 128.1 fill 15132390;
+   line 139.2 112.4 227.2 112.4 color 16711680 fill 15132390;
+   text 's  + 2      s  + ' 176 120.1 color 16711680 14;
+   text 'z' 172.3 121.2 color 16711680 'SymbolProp BT' 11 symbol;
+   text 'w' 181.3 120.1 color 16711680 'SymbolProp BT' 15;
+   text 'k' 176.5 103.6 color 16711680 14;
+   group
+    text '2' 194.7 101.2 color 16711680 11;
+    text 'w' 186.7 103.9 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text '2' 225.6 116.7 color 16711680 11;
+    text 'w' 217.6 119.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   text '2' 149.3 116.2 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1.0;			// gain []
+	real omega = 1.0;		// frequency [rad/s]
+	real zeta = 0.7;			// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2)*omega;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)*omega;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+			end;
+   TransferFunction1 280 296
+			specifications active 'FO'
+				specification 'FO'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Description>1 / [ s ( LSM LRM - M^2) + LSM rr]</Description><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg top
+  figures
+   rectangle 256 279.4 304 312.6 fill 15132390;
+   text 'k' 281.1 287.1 color 16711680 14;
+   line 261.7 297 299.4 297 color 16711680 fill 15132390;
+   text 't' 274.7 303.7 color 16711680 'SymbolProp BT' 15;
+   text 's    + 1' 280 303.7 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;		// gain []
+    real tau = 1;		// time constant [s / rad]
+variables
+    real rate, state;
+equations
+    rate = (k * input - state) / tau;
+    state = int (rate);
+    output = state;                    implementation_end;
+specification_end;
+				specification 'FOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96 216 128 fill 15132390;
+   group
+    text 't' 176.5 118.8 color 16711680 'SymbolProp BT' 15;
+    text 's    + 1' 184 118.8 color 16711680 14;
+   end;
+   line 155.5 114 210.9 114 color 16711680 fill 15132390;
+   group
+    text 'L' 187.2 108.2 color 16711680 11;
+    text 't' 181.3 105 color 16711680 'SymbolProp BT' 15;
+   end;
+   text 'k' 160.5 105.5 color 16711680 14;
+   text '(s    + 1)' 188.8 105 color 16711680 14;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lead time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tau );
+	output = state + ( tauL/tau ) * rate;  implementation_end;
+specification_end;
+				specification 'FOLA'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96.5 216 128.5 fill 15132390;
+   line 156.6 113.5 211.9 113.5 color 16711680 fill 15132390;
+   group
+    text 'k' 160.5 105 color 16711680 14;
+    text '(s    + 1)' 187.7 104.4 color 16711680 14;
+    text 't' 180.3 104.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text 's    + 1' 182.4 119.4 color 16711680 14;
+    text 't' 173.9 119.4 color 16711680 'SymbolProp BT' 15;
+    text 'L' 179.7 122.6 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lag time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tauL );
+	output = state + ( tau/tauL ) * rate;  implementation_end;
+specification_end;
+				specification 'SOI'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 160 97 208 128 fill 15132390;
+   text 'k' 187.2 104 color 16711680 14;
+   line 163.2 112.5 202.7 112.5 color 16711680 fill 15132390;
+   group
+    text 's(s  + 1)' 184 118.4 color 16711680 14;
+    text 't' 181.9 118.4 color 16711680 'SymbolProp BT' 15;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+ 	real tau = 1;		// time constant [s / rad]
+variables
+    real hidden rate1, state1;
+    real rate2,state2;
+equations
+	rate1 = ( k * input );
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau;
+	state2 = int(rate2);
+	output = state2;                        implementation_end;
+specification_end;
+				specification 'SOO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.6 232 128.6 fill 15132390;
+   group
+    text 't' 198.4 117.9 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.1 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 117.9 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.1 color 16711680 11;
+   end;
+   line 140.8 112.1 226.1 112.1 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 117.9 color 16711680 14;
+   text '(s    + 1)' 205.9 117.9 color 16711680 14;
+   text 'k' 183.5 103.3 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s / rad]
+	real tau2 = 1;		// time constant 2 [s / rad]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state1) / tau1;
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau2;
+	state2 = int(rate2);
+	output = state2;                         implementation_end;
+specification_end;
+				specification 'SOOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 97.3 232 129.3 fill 15132390;
+   group
+    text 't' 198.4 118.1 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.3 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 118.1 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.2 color 16711680 11;
+   end;
+   text 'k' 159.5 103.7 color 16711680 14;
+   line 140.8 112.2 226.1 112.2 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 118.1 color 16711680 14;
+   text '(s    + 1)' 205.9 118.1 color 16711680 14;
+   group
+    text '(s    + 1)' 187.7 103.7 color 16711680 14;
+    text 't' 180.3 103.7 color 16711680 'SymbolProp BT' 15;
+    text 'L' 185.1 106.9 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s ]
+	real tau2 = 1;		// time constant 2 [s ]
+	real tauL = 2;		// lead time [s]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = state2/k - input;
+	state1 = int (rate1);
+	rate2 = k/(tau1*tau2) * ( tauL*input - state1 - state2*(tau1+tau2)/k );
+	state2 = int(rate2);
+	output = state2;             implementation_end;
+specification_end;
+				specification 'SOU'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2011-3-23 10:32:13</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 200 511.7 296 543.7 fill 15132390;
+   line 204.8 527.2 290.1 527.2 color 16711680 fill 15132390;
+   text 's  + 2     s  + 1' 254.3 535.7 color 16711680 14;
+   text 'z' 251.4 536.8 color 16711680 'SymbolProp BT' 11 symbol;
+   text '2' 216.4 532 color 16711680 11;
+   text 't' 210 535.7 color 16711680 'SymbolProp BT' 15;
+   text 't' 258.5 535.7 color 16711680 'SymbolProp BT' 15;
+   text 'k' 248.4 519.2 color 16711680 14;
+   text '2' 228.4 532 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1;			// gain []
+    	real tau = 1;		// time constant [s ]
+	real zeta = 0.7;		// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2) / tau;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)/tau;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+				specification 'SOUO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.1 232 128.1 fill 15132390;
+   line 139.2 112.4 227.2 112.4 color 16711680 fill 15132390;
+   text 's  + 2      s  + ' 176 120.1 color 16711680 14;
+   text 'z' 172.3 121.2 color 16711680 'SymbolProp BT' 11 symbol;
+   text 'w' 181.3 120.1 color 16711680 'SymbolProp BT' 15;
+   text 'k' 176.5 103.6 color 16711680 14;
+   group
+    text '2' 194.7 101.2 color 16711680 11;
+    text 'w' 186.7 103.9 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text '2' 225.6 116.7 color 16711680 11;
+    text 'w' 217.6 119.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   text '2' 149.3 116.2 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1.0;			// gain []
+	real omega = 1.0;		// frequency [rad/s]
+	real zeta = 0.7;			// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2)*omega;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)*omega;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+			end;
+   TransferFunction2 280 520
+			specifications active 'FO'
+				specification 'FO'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Description>1 / [ s ( LSM LRM - M^2) + LRM rs]</Description><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg top
+  figures
+   rectangle 256 503.4 304 536.6 fill 15132390;
+   text 'k' 281.1 511.1 color 16711680 14;
+   line 261.7 521 299.4 521 color 16711680 fill 15132390;
+   text 't' 274.7 527.7 color 16711680 'SymbolProp BT' 15;
+   text 's    + 1' 280 527.7 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;		// gain []
+    real tau = 1;		// time constant [s / rad]
+variables
+    real rate, state;
+equations
+    rate = (k * input - state) / tau;
+    state = int (rate);
+    output = state;                    implementation_end;
+specification_end;
+				specification 'FOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96 216 128 fill 15132390;
+   group
+    text 't' 176.5 118.8 color 16711680 'SymbolProp BT' 15;
+    text 's    + 1' 184 118.8 color 16711680 14;
+   end;
+   line 155.5 114 210.9 114 color 16711680 fill 15132390;
+   group
+    text 'L' 187.2 108.2 color 16711680 11;
+    text 't' 181.3 105 color 16711680 'SymbolProp BT' 15;
+   end;
+   text 'k' 160.5 105.5 color 16711680 14;
+   text '(s    + 1)' 188.8 105 color 16711680 14;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lead time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tau );
+	output = state + ( tauL/tau ) * rate;  implementation_end;
+specification_end;
+				specification 'FOLA'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96.5 216 128.5 fill 15132390;
+   line 156.6 113.5 211.9 113.5 color 16711680 fill 15132390;
+   group
+    text 'k' 160.5 105 color 16711680 14;
+    text '(s    + 1)' 187.7 104.4 color 16711680 14;
+    text 't' 180.3 104.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text 's    + 1' 182.4 119.4 color 16711680 14;
+    text 't' 173.9 119.4 color 16711680 'SymbolProp BT' 15;
+    text 'L' 179.7 122.6 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lag time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tauL );
+	output = state + ( tau/tauL ) * rate;  implementation_end;
+specification_end;
+				specification 'SOI'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 160 97 208 128 fill 15132390;
+   text 'k' 187.2 104 color 16711680 14;
+   line 163.2 112.5 202.7 112.5 color 16711680 fill 15132390;
+   group
+    text 's(s  + 1)' 184 118.4 color 16711680 14;
+    text 't' 181.9 118.4 color 16711680 'SymbolProp BT' 15;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+ 	real tau = 1;		// time constant [s / rad]
+variables
+    real hidden rate1, state1;
+    real rate2,state2;
+equations
+	rate1 = ( k * input );
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau;
+	state2 = int(rate2);
+	output = state2;                        implementation_end;
+specification_end;
+				specification 'SOO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.6 232 128.6 fill 15132390;
+   group
+    text 't' 198.4 117.9 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.1 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 117.9 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.1 color 16711680 11;
+   end;
+   line 140.8 112.1 226.1 112.1 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 117.9 color 16711680 14;
+   text '(s    + 1)' 205.9 117.9 color 16711680 14;
+   text 'k' 183.5 103.3 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s / rad]
+	real tau2 = 1;		// time constant 2 [s / rad]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state1) / tau1;
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau2;
+	state2 = int(rate2);
+	output = state2;                         implementation_end;
+specification_end;
+				specification 'SOOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 97.3 232 129.3 fill 15132390;
+   group
+    text 't' 198.4 118.1 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.3 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 118.1 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.2 color 16711680 11;
+   end;
+   text 'k' 159.5 103.7 color 16711680 14;
+   line 140.8 112.2 226.1 112.2 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 118.1 color 16711680 14;
+   text '(s    + 1)' 205.9 118.1 color 16711680 14;
+   group
+    text '(s    + 1)' 187.7 103.7 color 16711680 14;
+    text 't' 180.3 103.7 color 16711680 'SymbolProp BT' 15;
+    text 'L' 185.1 106.9 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s ]
+	real tau2 = 1;		// time constant 2 [s ]
+	real tauL = 2;		// lead time [s]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = state2/k - input;
+	state1 = int (rate1);
+	rate2 = k/(tau1*tau2) * ( tauL*input - state1 - state2*(tau1+tau2)/k );
+	state2 = int(rate2);
+	output = state2;             implementation_end;
+specification_end;
+				specification 'SOU'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2011-3-23 10:32:13</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 200 511.7 296 543.7 fill 15132390;
+   line 204.8 527.2 290.1 527.2 color 16711680 fill 15132390;
+   text 's  + 2     s  + 1' 254.3 535.7 color 16711680 14;
+   text 'z' 251.4 536.8 color 16711680 'SymbolProp BT' 11 symbol;
+   text '2' 216.4 532 color 16711680 11;
+   text 't' 210 535.7 color 16711680 'SymbolProp BT' 15;
+   text 't' 258.5 535.7 color 16711680 'SymbolProp BT' 15;
+   text 'k' 248.4 519.2 color 16711680 14;
+   text '2' 228.4 532 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1;			// gain []
+    	real tau = 1;		// time constant [s ]
+	real zeta = 0.7;		// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2) / tau;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)/tau;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+				specification 'SOUO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.1 232 128.1 fill 15132390;
+   line 139.2 112.4 227.2 112.4 color 16711680 fill 15132390;
+   text 's  + 2      s  + ' 176 120.1 color 16711680 14;
+   text 'z' 172.3 121.2 color 16711680 'SymbolProp BT' 11 symbol;
+   text 'w' 181.3 120.1 color 16711680 'SymbolProp BT' 15;
+   text 'k' 176.5 103.6 color 16711680 14;
+   group
+    text '2' 194.7 101.2 color 16711680 11;
+    text 'w' 186.7 103.9 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text '2' 225.6 116.7 color 16711680 11;
+    text 'w' 217.6 119.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   text '2' 149.3 116.2 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1.0;			// gain []
+	real omega = 1.0;		// frequency [rad/s]
+	real zeta = 0.7;			// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2)*omega;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)*omega;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+			end;
+   TransferFunction3 280 688
+			specifications active 'FO'
+				specification 'FO'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Description>1 / [ s ( LSM LRM - M^2) + LSM rr]</Description><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg top
+  figures
+   rectangle 256 671.4 304 704.6 fill 15132390;
+   text 'k' 281.1 679.1 color 16711680 14;
+   line 261.7 689 299.4 689 color 16711680 fill 15132390;
+   text 't' 274.7 695.7 color 16711680 'SymbolProp BT' 15;
+   text 's    + 1' 280 695.7 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;		// gain []
+    real tau = 1;		// time constant [s / rad]
+variables
+    real rate, state;
+equations
+    rate = (k * input - state) / tau;
+    state = int (rate);
+    output = state;                    implementation_end;
+specification_end;
+				specification 'FOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96 216 128 fill 15132390;
+   group
+    text 't' 176.5 118.8 color 16711680 'SymbolProp BT' 15;
+    text 's    + 1' 184 118.8 color 16711680 14;
+   end;
+   line 155.5 114 210.9 114 color 16711680 fill 15132390;
+   group
+    text 'L' 187.2 108.2 color 16711680 11;
+    text 't' 181.3 105 color 16711680 'SymbolProp BT' 15;
+   end;
+   text 'k' 160.5 105.5 color 16711680 14;
+   text '(s    + 1)' 188.8 105 color 16711680 14;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lead time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tau );
+	output = state + ( tauL/tau ) * rate;  implementation_end;
+specification_end;
+				specification 'FOLA'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96.5 216 128.5 fill 15132390;
+   line 156.6 113.5 211.9 113.5 color 16711680 fill 15132390;
+   group
+    text 'k' 160.5 105 color 16711680 14;
+    text '(s    + 1)' 187.7 104.4 color 16711680 14;
+    text 't' 180.3 104.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text 's    + 1' 182.4 119.4 color 16711680 14;
+    text 't' 173.9 119.4 color 16711680 'SymbolProp BT' 15;
+    text 'L' 179.7 122.6 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lag time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tauL );
+	output = state + ( tau/tauL ) * rate;  implementation_end;
+specification_end;
+				specification 'SOI'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 160 97 208 128 fill 15132390;
+   text 'k' 187.2 104 color 16711680 14;
+   line 163.2 112.5 202.7 112.5 color 16711680 fill 15132390;
+   group
+    text 's(s  + 1)' 184 118.4 color 16711680 14;
+    text 't' 181.9 118.4 color 16711680 'SymbolProp BT' 15;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+ 	real tau = 1;		// time constant [s / rad]
+variables
+    real hidden rate1, state1;
+    real rate2,state2;
+equations
+	rate1 = ( k * input );
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau;
+	state2 = int(rate2);
+	output = state2;                        implementation_end;
+specification_end;
+				specification 'SOO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.6 232 128.6 fill 15132390;
+   group
+    text 't' 198.4 117.9 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.1 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 117.9 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.1 color 16711680 11;
+   end;
+   line 140.8 112.1 226.1 112.1 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 117.9 color 16711680 14;
+   text '(s    + 1)' 205.9 117.9 color 16711680 14;
+   text 'k' 183.5 103.3 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s / rad]
+	real tau2 = 1;		// time constant 2 [s / rad]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state1) / tau1;
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau2;
+	state2 = int(rate2);
+	output = state2;                         implementation_end;
+specification_end;
+				specification 'SOOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 97.3 232 129.3 fill 15132390;
+   group
+    text 't' 198.4 118.1 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.3 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 118.1 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.2 color 16711680 11;
+   end;
+   text 'k' 159.5 103.7 color 16711680 14;
+   line 140.8 112.2 226.1 112.2 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 118.1 color 16711680 14;
+   text '(s    + 1)' 205.9 118.1 color 16711680 14;
+   group
+    text '(s    + 1)' 187.7 103.7 color 16711680 14;
+    text 't' 180.3 103.7 color 16711680 'SymbolProp BT' 15;
+    text 'L' 185.1 106.9 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s ]
+	real tau2 = 1;		// time constant 2 [s ]
+	real tauL = 2;		// lead time [s]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = state2/k - input;
+	state1 = int (rate1);
+	rate2 = k/(tau1*tau2) * ( tauL*input - state1 - state2*(tau1+tau2)/k );
+	state2 = int(rate2);
+	output = state2;             implementation_end;
+specification_end;
+				specification 'SOU'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2011-3-23 10:32:13</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 200 511.7 296 543.7 fill 15132390;
+   line 204.8 527.2 290.1 527.2 color 16711680 fill 15132390;
+   text 's  + 2     s  + 1' 254.3 535.7 color 16711680 14;
+   text 'z' 251.4 536.8 color 16711680 'SymbolProp BT' 11 symbol;
+   text '2' 216.4 532 color 16711680 11;
+   text 't' 210 535.7 color 16711680 'SymbolProp BT' 15;
+   text 't' 258.5 535.7 color 16711680 'SymbolProp BT' 15;
+   text 'k' 248.4 519.2 color 16711680 14;
+   text '2' 228.4 532 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1;			// gain []
+    	real tau = 1;		// time constant [s ]
+	real zeta = 0.7;		// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2) / tau;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)/tau;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+				specification 'SOUO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.1 232 128.1 fill 15132390;
+   line 139.2 112.4 227.2 112.4 color 16711680 fill 15132390;
+   text 's  + 2      s  + ' 176 120.1 color 16711680 14;
+   text 'z' 172.3 121.2 color 16711680 'SymbolProp BT' 11 symbol;
+   text 'w' 181.3 120.1 color 16711680 'SymbolProp BT' 15;
+   text 'k' 176.5 103.6 color 16711680 14;
+   group
+    text '2' 194.7 101.2 color 16711680 11;
+    text 'w' 186.7 103.9 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text '2' 225.6 116.7 color 16711680 11;
+    text 'w' 217.6 119.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   text '2' 149.3 116.2 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1.0;			// gain []
+	real omega = 1.0;		// frequency [rad/s]
+	real zeta = 0.7;			// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2)*omega;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)*omega;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+			end;
+   TransferFunction4 256 888
+			specifications active 'FO'
+				specification 'FO'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Description>1 / (sJ + Bm)</Description><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 232 871.4 280 904.6 fill 15132390;
+   text 'k' 257.1 879.1 color 16711680 14;
+   line 237.7 889 275.4 889 color 16711680 fill 15132390;
+   text 't' 250.7 895.7 color 16711680 'SymbolProp BT' 15;
+   text 's    + 1' 256 895.7 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;		// gain []
+    real tau = 1;		// time constant [s / rad]
+variables
+    real rate, state;
+equations
+    rate = (k * input - state) / tau;
+    state = int (rate);
+    output = state;                    implementation_end;
+specification_end;
+				specification 'FOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96 216 128 fill 15132390;
+   group
+    text 't' 176.5 118.8 color 16711680 'SymbolProp BT' 15;
+    text 's    + 1' 184 118.8 color 16711680 14;
+   end;
+   line 155.5 114 210.9 114 color 16711680 fill 15132390;
+   group
+    text 'L' 187.2 108.2 color 16711680 11;
+    text 't' 181.3 105 color 16711680 'SymbolProp BT' 15;
+   end;
+   text 'k' 160.5 105.5 color 16711680 14;
+   text '(s    + 1)' 188.8 105 color 16711680 14;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lead time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tau );
+	output = state + ( tauL/tau ) * rate;  implementation_end;
+specification_end;
+				specification 'FOLA'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 152 96.5 216 128.5 fill 15132390;
+   line 156.6 113.5 211.9 113.5 color 16711680 fill 15132390;
+   group
+    text 'k' 160.5 105 color 16711680 14;
+    text '(s    + 1)' 187.7 104.4 color 16711680 14;
+    text 't' 180.3 104.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text 's    + 1' 182.4 119.4 color 16711680 14;
+    text 't' 173.9 119.4 color 16711680 'SymbolProp BT' 15;
+    text 'L' 179.7 122.6 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+	real tau = 1;		// time constant [s ]
+	real tauL = 1;		// lag time [s]
+variables
+    real hidden rate, state;
+equations
+	rate = ( k * input - state );
+	state = int ( rate / tauL );
+	output = state + ( tau/tauL ) * rate;  implementation_end;
+specification_end;
+				specification 'SOI'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 160 97 208 128 fill 15132390;
+   text 'k' 187.2 104 color 16711680 14;
+   line 163.2 112.5 202.7 112.5 color 16711680 fill 15132390;
+   group
+    text 's(s  + 1)' 184 118.4 color 16711680 14;
+    text 't' 181.9 118.4 color 16711680 'SymbolProp BT' 15;
+   end;
+ end;
+ implementation eq
+parameters
+	real k = 1;			// gain []
+ 	real tau = 1;		// time constant [s / rad]
+variables
+    real hidden rate1, state1;
+    real rate2,state2;
+equations
+	rate1 = ( k * input );
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau;
+	state2 = int(rate2);
+	output = state2;                        implementation_end;
+specification_end;
+				specification 'SOO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.6 232 128.6 fill 15132390;
+   group
+    text 't' 198.4 117.9 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.1 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 117.9 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.1 color 16711680 11;
+   end;
+   line 140.8 112.1 226.1 112.1 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 117.9 color 16711680 14;
+   text '(s    + 1)' 205.9 117.9 color 16711680 14;
+   text 'k' 183.5 103.3 color 16711680 14;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s / rad]
+	real tau2 = 1;		// time constant 2 [s / rad]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state1) / tau1;
+	state1 = int (rate1);
+	rate2 = (state1 - state2)/tau2;
+	state2 = int(rate2);
+	output = state2;                         implementation_end;
+specification_end;
+				specification 'SOOL'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 97.3 232 129.3 fill 15132390;
+   group
+    text 't' 198.4 118.1 color 16711680 'SymbolProp BT' 15;
+    text '2' 203.2 121.3 color 16711680 11;
+   end;
+   group
+    text 't' 153.6 118.1 color 16711680 'SymbolProp BT' 15;
+    text '1' 157.9 120.2 color 16711680 11;
+   end;
+   text 'k' 159.5 103.7 color 16711680 14;
+   line 140.8 112.2 226.1 112.2 color 16711680 fill 15132390;
+   text '(s    + 1)' 161.1 118.1 color 16711680 14;
+   text '(s    + 1)' 205.9 118.1 color 16711680 14;
+   group
+    text '(s    + 1)' 187.7 103.7 color 16711680 14;
+    text 't' 180.3 103.7 color 16711680 'SymbolProp BT' 15;
+    text 'L' 185.1 106.9 color 16711680 11;
+   end;
+ end;
+ implementation eq
+parameters
+    real k = 1;			// gain []
+    real tau1 = 1;		// time constant 1 [s ]
+	real tau2 = 1;		// time constant 2 [s ]
+	real tauL = 2;		// lead time [s]
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = state2/k - input;
+	state1 = int (rate1);
+	rate2 = k/(tau1*tau2) * ( tauL*input - state1 - state2*(tau1+tau2)/k );
+	state2 = int(rate2);
+	output = state2;             implementation_end;
+specification_end;
+				specification 'SOU'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2011-3-23 10:32:13</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 200 511.7 296 543.7 fill 15132390;
+   line 204.8 527.2 290.1 527.2 color 16711680 fill 15132390;
+   text 's  + 2     s  + 1' 254.3 535.7 color 16711680 14;
+   text 'z' 251.4 536.8 color 16711680 'SymbolProp BT' 11 symbol;
+   text '2' 216.4 532 color 16711680 11;
+   text 't' 210 535.7 color 16711680 'SymbolProp BT' 15;
+   text 't' 258.5 535.7 color 16711680 'SymbolProp BT' 15;
+   text 'k' 248.4 519.2 color 16711680 14;
+   text '2' 228.4 532 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1;			// gain []
+    	real tau = 1;		// time constant [s ]
+	real zeta = 0.7;		// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2) / tau;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)/tau;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+				specification 'SOUO'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Transfer Functions\TransferFunction.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type TransferFunction
+  ports
+   signal in input;
+   signal out output;
+ end;
+ icon bg bottom
+  figures
+   rectangle 136 96.1 232 128.1 fill 15132390;
+   line 139.2 112.4 227.2 112.4 color 16711680 fill 15132390;
+   text 's  + 2      s  + ' 176 120.1 color 16711680 14;
+   text 'z' 172.3 121.2 color 16711680 'SymbolProp BT' 11 symbol;
+   text 'w' 181.3 120.1 color 16711680 'SymbolProp BT' 15;
+   text 'k' 176.5 103.6 color 16711680 14;
+   group
+    text '2' 194.7 101.2 color 16711680 11;
+    text 'w' 186.7 103.9 color 16711680 'SymbolProp BT' 15;
+   end;
+   group
+    text '2' 225.6 116.7 color 16711680 11;
+    text 'w' 217.6 119.4 color 16711680 'SymbolProp BT' 15;
+   end;
+   text '2' 149.3 116.2 color 16711680 11;
+ end;
+ implementation eq
+parameters
+    	real k = 1.0;			// gain []
+	real omega = 1.0;		// frequency [rad/s]
+	real zeta = 0.7;			// damping constant []
+variables
+    	real hidden rate1,rate2, state1;
+	real state2;
+equations
+	rate1 = (k * input - state2)*omega;
+	state1 = int (rate1);
+	rate2 = (state1 - 2*zeta*state2)*omega;
+	state2 = int(rate2);
+	output = state2;                            implementation_end;
+specification_end;
+			end;
+  end;
+  connections
+   LRM_1\output -> PlusMinus\plus;
+   Splitter2\output -> LRM_1\input;
+   M_1\output -> PlusMinus1\plus;
+   Splitter8\output -> M_4\input;
+   PlusMinus1\output -> TransferFunction1\input;
+   Splitter5\output -> LRM_3\input;
+   TransferFunction1\output -> Splitter1\input;
+   Gain3P4\output -> PlusMinus7\plus 136 832;
+   Splitter1\output -> Splitter11\input;
+   M_3\output -> PlusMinus3\plus;
+   MultiplyDivide\output -> Splitter17\input;
+   Splitter11\output -> MultiplyDivide3\multiply 440 792;
+   M_5\output -> PlusMinus3\minus 176 752;
+   PlusMinus5\output -> MultiplyDivide1\multiply 616 520;
+   MultiplyDivide1\output -> Splitter16\input;
+   Splitter8\output -> MultiplyDivide2\multiply 336 792;
+   M_7\output -> PlusMinus1\plus 200 360;
+   Splitter16\output -> M_7\input;
+   Splitter16\output -> LRM_2\input 616 64;
+   Splitter2\output -> M_1\input 104 296;
+   Mrs_2\output -> PlusMinus3\plus 176 568;
+   Splitter5\output -> M_3\input 80 688;
+   PlusMinus\output -> TransferFunction\input;
+   LRM_2\output -> PlusMinus\minus 224 64;
+   Splitter17\output -> M_5\input 576 752;
+   Splitter17\output -> LRM_4\input;
+   PlusMinus3\output -> TransferFunction3\input;
+   LSM_4\output -> PlusMinus5\plus;
+   M_4\output -> PlusMinus5\plus 544 712;
+   LRM_4\output -> PlusMinus2\plus 208 464;
+   LRM_3\output -> PlusMinus2\plus;
+   PlusMinus2\output -> TransferFunction2\input;
+   TransferFunction2\output -> Splitter3\input;
+   M_6\output -> Gain3P4\input;
+   Splitter\output -> Splitter9\input;
+   Sine1\output -> Splitter5\input;
+   Sine\output -> Splitter2\input;
+   M_2\output -> PlusMinus4\plus;
+   TransferFunction3\output -> Splitter4\input;
+   Splitter9\output -> LSM_1\input;
+   Splitter4\output -> Splitter8\input;
+   PlusMinus7\output -> GainP2\input;
+   TransferFunction\output -> Splitter\input;
+   LSM_1\output -> PlusMinus4\plus 544 128;
+   Splitter10\output -> MultiplyDivide3\multiply;
+   PlusMinus4\output -> MultiplyDivide\multiply 576 296;
+   Splitter\output -> Mrs_1\input;
+   Sine2\output -> PlusMinus7\minus;
+   Mrs_1\output -> PlusMinus1\plus 200 176;
+   Mrr_1\output -> PlusMinus\plus 224 248;
+   GainP2\output -> TransferFunction4\input;
+   Splitter9\output -> MultiplyDivide2\multiply;
+   PlusMinus6\output -> M_6\input;
+   Splitter4\output -> Mrr_2\input;
+   Mrr_2\output -> PlusMinus2\plus 208 640;
+   TransferFunction4\output -> Splitter12\input 656 888;
+   Splitter3\output -> Mrs_2\input;
+   MultiplyDivide2\output -> PlusMinus6\plus;
+   MultiplyDivide3\output -> PlusMinus6\minus 408 832;
+   Splitter10\output -> LSM_4\input;
+   Splitter1\output -> Mrr_1\input;
+   Splitter11\output -> M_2\input;
+   Splitter12\output -> MultiplyDivide\multiply 656 328;
+   Splitter3\output -> Splitter10\input;
+   Splitter12\output -> MultiplyDivide1\multiply;
+  end;
+  figures
+   text 'urqs' 56 128;
+   text 'urds' 56 520;
+   text 'TL' 56 928;
+ implementation_end;
+]]>
+</Sidops>
+ </Model>
+ <Experiments>
+     <DefaultExperiment><![CDATA[Experiment 1]]>
+</DefaultExperiment>
+  <Experiment>
+    <Name>Experiment 1</Name>
+    <CreatedBy></CreatedBy>
+    <Info></Info>
+<ExpData>
+  <VersionNumber>4.5</VersionNumber>
+  <ModelProperties>
+  </ModelProperties>
+  <Variables>
+   <Parameters>
+   </Parameters>
+  </Variables>
+  <PlotSpecs>
+   <VarNames>
+    <VarName>time</VarName>
+   </VarNames>
+   <Plots>
+    <Plot>
+     <PlotType>GraphPlot</PlotType>
+     <BasePlot>
+       <PlotId>1</PlotId>
+       <UseWindowsBGColor>true</UseWindowsBGColor>
+       <BGColor>15790320</BGColor>
+       <PlotIsVisible>true</PlotIsVisible>
+     </BasePlot>
+     <Grid>
+      <DrawGrid>true</DrawGrid>
+      <GridColor>15780518</GridColor>
+      <XTicks>10</XTicks>
+      <YTicks>10</YTicks>
+      <ZTicks>10</ZTicks>
+      <Use3DLook>false</Use3DLook>
+     </Grid>
+     <PlotBGColor>16777215</PlotBGColor>
+     <ShowPlotTitle>true</ShowPlotTitle>
+     <TitlePosition>1</TitlePosition>
+     <PlotTitle>model</PlotTitle>
+     <ShowXValues>true</ShowXValues>
+     <Fonts>
+      <TitleFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </TitleFont>
+      <LabelFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </LabelFont>
+      <ValuesFont>
+       <Name>Arial</Name>
+       <Height>10</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </ValuesFont>
+     </Fonts>
+     <SharedXAxis>true</SharedXAxis>
+     <SharedYAxis>true</SharedYAxis>
+     <SharedZAxis>false</SharedZAxis>
+     <XAxes>
+      <Axis>
+       <Minimum>0</Minimum>
+       <Maximum>10</Maximum>
+       <Linear>true</Linear>
+       <Scaling>3</Scaling>
+       <Label>time</Label>
+      </Axis>
+     </XAxes>
+     <YAxes>
+      <Axis>
+       <Minimum>-6</Minimum>
+       <Maximum>14</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label></Label>
+      </Axis>
+     </YAxes>
+     <ZAxes>
+     </ZAxes>
+     <Curves>
+      <Curve>
+       <LineColor>16711680</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711680</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+      </Curve>
+     </Curves>
+     <Legenda>
+      <ShowLegenda>true</ShowLegenda>
+     </Legenda>
+    </Plot>
+   </Plots>
+   <PlotPanels>
+    <PlotPanel>
+     <PlotPanelId>1</PlotPanelId>
+     <PlotPanelVisible>true</PlotPanelVisible>
+     <Name>Window 1</Name>
+     <Tiling>0</Tiling>
+     <PlotIds>
+       <PlotId>1</PlotId>
+     </PlotIds>
+     <ToggleState>Base</ToggleState>
+    </PlotPanel>
+   </PlotPanels>
+  </PlotSpecs>
+  <RunSpecs>
+   <SimulatorSettings>
+    <StartTime>0</StartTime>
+    <FinishTime>10</FinishTime>
+    <Warp>false</Warp>
+    <UseOutputAfterEach>false</UseOutputAfterEach>
+    <OutputAfterEach>0.1</OutputAfterEach>
+    <EventEpsilon>1e-006</EventEpsilon>
+    <AlgebraicTolerance>1e-007</AlgebraicTolerance>
+    <SteadyStateAnalysis>false</SteadyStateAnalysis>
+    <UpdateHoldInstructions>true</UpdateHoldInstructions>
+   </SimulatorSettings>
+   <IntegrationMethods>
+    <IntegrationMethod>
+     <Name>Euler</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BackwardEuler</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <StepSize>0.01</StepSize>
+     <Alpha>1</Alpha>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>AdamsBashforth</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta2</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta4</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta8</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0.001</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>1</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <SafetyFactor>0.9</SafetyFactor>
+     <Factor1>0.33</Factor1>
+     <Factor2>6</Factor2>
+     <Beta>0</Beta>
+     <UseMaxNrSteps>false</UseMaxNrSteps>
+     <MaxNrSteps>100000</MaxNrSteps>
+     <UseStiffDetection>false</UseStiffDetection>
+     <MaxNrStiffnessSteps>1000</MaxNrStiffnessSteps>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKuttaFehlberg</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0.001</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>1</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>VodeAdams</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0.001</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>1</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <VodeUseBDF>true</VodeUseBDF>
+     <VodeUseNewton>true</VodeUseNewton>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BDFMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0.001</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>1</MaximumStepSize>
+     <UseFixedStepSize>false</UseFixedStepSize>
+     <FixedStepSize>0</FixedStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>MeBDFiMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0.001</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>1</MaximumStepSize>
+     <UseFixedStepSize>false</UseFixedStepSize>
+     <FixedStepSize>0</FixedStepSize>
+    </IntegrationMethod>
+    <SelectedIntegrationMethod>8</SelectedIntegrationMethod>
+   </IntegrationMethods>
+  </RunSpecs>
+  <MultipleRun>
+   <NrSteps>10</NrSteps>
+   <CopyFromStates>false</CopyFromStates>
+   <JoinParameterVariation>true</JoinParameterVariation>
+   <ClearAfterRun>true</ClearAfterRun>
+   <RedrawAfterRun>false</RedrawAfterRun>
+   <DrawDuringSimulation>true</DrawDuringSimulation>
+   <ActionBeforeOptimization>0</ActionBeforeOptimization>
+   <CompareValue>0</CompareValue>
+   <UseCompareValue>true</UseCompareValue>
+   <MultipleRunType>MultipleRun</MultipleRunType>
+   <Minimize>true</Minimize>
+   <OptimizationVariable></OptimizationVariable>
+   <ResulVarUsage>UseEndValue</ResulVarUsage>
+   <Tolerance>0.001</Tolerance>
+   <OptimizationMethod>BroydonFletcherGoldfarbShanno</OptimizationMethod>
+   <MultipleRunVariables>
+   </MultipleRunVariables>
+  </MultipleRun>
+  <ExportData>
+   <WriteAsText>true</WriteAsText>
+   <ReadAsText>true</ReadAsText>
+   <WriteHeader>true</WriteHeader>
+   <ReadHeader>true</ReadHeader>
+   <ReadFilename></ReadFilename>
+   <WriteFilename></WriteFilename>
+   <DoWrite>false</DoWrite>
+   <ExportVariables>
+   </ExportVariables>
+   <ImportVariables>
+   </ImportVariables>
+  </ExportData>
+  <BreakPoints>
+  </BreakPoints>
+</ExpData>
+  </Experiment>
+</Experiments>
+</Document>

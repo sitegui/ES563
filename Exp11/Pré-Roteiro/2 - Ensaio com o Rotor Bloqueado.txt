@@ -1,0 +1,47 @@
+Ensaio com o Rotor Bloqueado
+
+1. Medir os seguintes parâmetros:
+
+Tensão entre fase e neutro
+V1bl = 
+
+Corrente de linha = Corrente de fase
+I1bl = 
+
+Potência polifásica total de entrada(2 wattimetros)
+Pbl = 
+
+
+frequência nominal do motor
+fr = 60Hz?
+
+frequência do ensaio de rotor bloqueado
+fbl = ?
+
+número de fases
+nph = 3?
+
+
+
+CÁLCULOS:
+
+Sbl = nph*V1bl*I1bl = 
+Qbl = sqrt(Sbl^2 - Pbl^2) = 
+
+Xbl = (fr/fbl)*[Qbl/(I1bl^2)] = 
+Rbl = Pbl/[nph*(I1bl^2)] = 
+
+
+X2 = (Xbl-X1)*[(Xnl-X1)/(Xnl-Xbl)]
+X2 = X1 = Xx
+Xx^2 - 2*Xx*Xnl - Xbl*Xnl = 0
+Xx = {2*Xnl +- sqrt[(2*Xnl)^2 + 4*Xbl*Xnl]}/2 = 
+
+Xm = Xnl - X1 =
+
+R2 = (Rbl- R1)*[(X2+Xm)/Xm]^2 = 
+
+
+
+
+

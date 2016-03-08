@@ -1,0 +1,64 @@
+Ensaio 1 (rotor travado)
+1.1
+V	Ia1	Ia2	Ia
+0.2	0.27	0.19	0.46	
+0.4	0.45	0.32	0.77
+0.6	0.78	0.56	1.34
+0.8	0.93	0.69	1.62
+1.0	1.28	0.8	2.08
+
+Ensaio 2 (motor sem carga, vazio)
+1.2 
+V0 = 15V
+I0 = 0.9+0.6A = 1.5A
+omega0 = 3970rpm = 415,7 rad/s
+
+1.3
+Montagem do circuito
+
+1.4
+Obtenção das imagens do osciloscópio
+
+Ensaio 3 ()
+1.5
+Rs = 5.3ohm
+Pela imagem 1.1:
+VA(reg) = Canal A(=1) = 1Vx(1/5*1/2 + 2 + 4/5) = 2,9V
+Ia(reg) = VA(reg)/Rs = 2.9/5.3 = 0.55A
+Ia(63%) = Ia(reg)x0.63 = 0.55x0.63 = 0.345A
+VA(t)/Rs = Ia(63%)
+VA(t) = Ia(63%)xRs = 0.345x5.3 = 1.83V
+Ou seja, qdo VA = 1.83V, Ia atingiu 63% do seu valor em regime:
+VA(tE) = 1.83V => tE = 5msx(1/5+1/5*1/5) = 1,2ms (Imagem 1.1)
+
+
+Ensaio 4
+1.6
+Rs = 5.3ohm
+Pela imagem 2.1:
+VB(reg) = Canal B(=2) = 5Vx(4/5 + 1 + 1/5*1/2) = 9.5V
+VB(63%) = VB(reg)x0.63 = 9.5x0.63 = 6V
+VB(t) = 6 => t = 2.5sx(2+1/5) = 5.5s (Imagem 2.1)
+
+1.7
+- Curva(V, Ia) no Excel, V = 0.4845xIa - 0.0076
+- Ra(curva no excel + Fig1/PreRoteiro6) = 0.4845ohm
+- Pelo Ensaio 2 e circuito equivalente da Fig04/PreRoteiro7, assumindo RL = 0(sem carga):
+	Io = (15-Vb)/(Ra+Rh+Rs)
+	15-Vb = 1,5(Ra+Rs+Rh) = 1.5x0.4845 + 1.5x5.3 + 1.5xRh
+	1.5xRh = 6.32 - Vb
+
+- circuito equivalente da Fig04/IntroduçãoTeorica-Exp7, Imagem Osciloscópio Ensaio 4, Ia(reg) do Ensaio 3:
+	E = força contraeletromotriz
+	(V - Vb) - E = Ia(reg)xRa 
+	(15-Vb)-9.5= 0.55x0.4845
+	Vb = 5.23V
+	
+	Equação acima:
+	1.5xRh = 6.32 - Vb
+	Rh = (6.32 - 5.23)/1.5 = 0.72ohm
+
+
+Ensaio 5
+I = 4.36 + 3.55 A = 7.91A
+omega = 2692rpm = 281.9 rad/s

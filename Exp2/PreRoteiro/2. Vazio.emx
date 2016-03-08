@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+ <Model version="4.5" build="4.5.1.5561">
+  <Sidops><![CDATA[model 128.1 184
+ description '<Information>
+ <Description>
+    <Version>4.5</Version>
+<IsMainModel>0</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+    <LibraryPath>C:\Users\Charles\Google Drive\ES563\Exp2\PreRoteiro\2. Vazio.emx</LibraryPath>
+  <TimeStamp>2015-3-18 14:25:45</TimeStamp>
+</Description>
+</Information>';
+ type Mainmodel
+ end;
+ implementation bg
+  submodels
+   Ground 272 352
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Ground.emx</LibraryPath>
+  <TimeStamp>2007-9-25 11:57:33</TimeStamp>
+</Description>';
+    type Ground
+     ports
+      electric psi duplicatable in p;
+     restrictions
+      causality fixed out p;
+    end;
+    icon ipm bottom
+     figures
+      line 264 352 280 352;
+      line 266.7 356.3 277.3 356.3;
+      line 269.3 360 274.7 360;
+      line 272 344 272 352;
+     terminals
+      p 272 344 fixed;
+      p 272 344 fixed;
+      p 272 344 fixed;
+    end;
+    implementation eq
+equations
+	p.u = 0;
+ implementation_end;
+   Ground1 576 352
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Ground.emx</LibraryPath>
+  <TimeStamp>2007-9-25 11:57:33</TimeStamp>
+</Description>';
+    type Ground
+     ports
+      electric psi duplicatable in p;
+     restrictions
+      causality fixed out p;
+    end;
+    icon ipm bottom
+     figures
+      line 568 352 584 352;
+      line 570.7 356.3 581.3 356.3;
+      line 573.3 360 578.7 360;
+      line 576 344 576 352;
+     terminals
+      p 576 344 fixed;
+      p 576 344 fixed;
+      p 576 344 fixed;
+    end;
+    implementation eq
+equations
+	p.u = 0;
+ implementation_end;
+   Node1 271.9 327.9
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>C:\Program Files\20-sim 4.0\System\Node.emx</LibraryPath>
+  <TimeStamp>2007-10-31 11:27:14</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 268.8 324.8 275.2 331.2 color -1 fill 0;
+      ellipse 267.7 323.7 276.2 332.2 color -1;
+     terminals
+      p 272 328 fixed;
+      p 272 328 fixed;
+      p 272 328 fixed;
+      p 272 328 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node2 575.9 327.9
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>C:\Program Files\20-sim 4.0\System\Node.emx</LibraryPath>
+  <TimeStamp>2007-10-31 11:27:14</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 572.8 324.8 579.2 331.2 color -1 fill 0;
+      ellipse 571.7 323.7 580.2 332.2 color -1;
+     terminals
+      p 576 328 fixed;
+      p 576 328 fixed;
+      p 576 328 fixed;
+      p 576 328 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node3 327.9 143.9
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>C:\Program Files\20-sim 4.0\System\Node.emx</LibraryPath>
+  <TimeStamp>2007-10-31 11:27:14</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 324.8 140.8 331.2 147.2 color -1 fill 0;
+      ellipse 323.7 139.7 332.2 148.2 color -1;
+     terminals
+      p 328 144 fixed;
+      p 328 144 fixed;
+      p 328 144 fixed;
+      p 328 144 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node4 327.9 327.9
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>C:\Program Files\20-sim 4.0\System\Node.emx</LibraryPath>
+  <TimeStamp>2007-10-31 11:27:14</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 324.8 324.8 331.2 331.2 color -1 fill 0;
+      ellipse 323.7 323.7 332.2 332.2 color -1;
+     terminals
+      p 328 328 fixed;
+      p 328 328 fixed;
+      p 328 328 fixed;
+      p 328 328 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node5 367.9 143.9
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>C:\Program Files\20-sim 4.0\System\Node.emx</LibraryPath>
+  <TimeStamp>2007-10-31 11:27:14</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 364.8 140.8 371.2 147.2 color -1 fill 0;
+      ellipse 363.7 139.7 372.2 148.2 color -1;
+     terminals
+      p 368 144 fixed;
+      p 368 144 fixed;
+      p 368 144 fixed;
+      p 368 144 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node6 367.9 327.9
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>C:\Program Files\20-sim 4.0\System\Node.emx</LibraryPath>
+  <TimeStamp>2007-10-31 11:27:14</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 364.8 324.8 371.2 331.2 color -1 fill 0;
+      ellipse 363.7 323.7 372.2 332.2 color -1;
+     terminals
+      p 368 328 fixed;
+      p 368 328 fixed;
+      p 368 328 fixed;
+      p 368 328 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   R1 208 144
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 184 144 232 144;
+      rectangle 192 136 224 152 fill 16777215;
+     terminals
+      p high 184 144 fixed;
+      p low 232 144 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 0.08 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   R2 648 144
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 624 144 672 144;
+      rectangle 632 136 664 152 fill 16777215;
+     terminals
+      p high 624 144 fixed;
+      p low 672 144 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 0.08 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   Rc1 328 240
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 328 216 328 264;
+      rectangle 320 224 336 256 fill 16777215;
+     terminals
+      p high 328 216 fixed;
+      p low 328 264 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 364.0 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   RL 712 248
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 712 224 712 272;
+      rectangle 704 232 720 264 fill 16777215;
+     terminals
+      p high 712 224 fixed;
+      p low 712 272 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 0.0 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   Tr 424 240.5
+			specifications active 'default'
+				specification 'default'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath><TimeStamp>2007-9-25 11:58:38</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   group
+    line 421.3 225.4 421.3 269.2;
+    line 426.7 225.4 426.7 269.2;
+   end;
+   text 'n : 1' 423 214 color 16711680 14;
+   line 408 224 416 224 416 272 408 272;
+   line 440 272 432 272 432 224 440 224;
+  terminals
+   p_1 high 408 224 fixed;
+   p_1 low 408 272 fixed;
+   p_2 high 440 224 fixed;
+   p_2 low 440 272 fixed;
+ end;
+ implementation eq
+parameters
+	real n = 2.0 {};		// turns ratio []
+equations
+	p_1.u = n * p_2.u;
+	p_2.i = n * p_1.i;           implementation_end;
+specification_end;
+				specification 'induction'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+  <LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath>
+  <TimeStamp>2007-9-24 20:22:16</TimeStamp>
+</Description>
+';
+ library_path 'Iconic Diagrams\Electric\Components\Transformer.emx';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   line 109 84.7 109 124.7;
+   line 115 84.7 115 124.7;
+   ellipse 100 88 108 96;
+   ellipse 100 96 108 104;
+   ellipse 100 104 108 112;
+   ellipse 100 112 108 120;
+   ellipse 116 88 124 96;
+   ellipse 116 96 124 104;
+   ellipse 116 104 124 112;
+   ellipse 116 112 124 120;
+   rectangle 120.5 87.7 125.7 121 color -1 fill 16777215;
+   rectangle 97.8 87.5 103.2 120.8 color -1 fill 16777215;
+   line 128 80 120 80 120 88;
+   line 128 128 120 128 120 120;
+   line 96 128 104 128 104 120;
+   line 96 80 104 80 104 88;
+  terminals
+   p_1 high 96 80 fixed;
+   p_1 low 96 128 fixed;
+   p_2 high 128 80 fixed;
+   p_2 low 128 128 fixed;
+ end;
+ implementation eq
+parameters
+	real M {H};		// coupling inductance
+	real L1 {H};		// primary inductance
+	real L2 {H};		// secondary inductance
+equations
+	p_1.u = L1*ddt (p_1.i) +  M * ddt (p_2.i);
+  	p_2.u = M *ddt (p_1.i) + L2 * ddt (p_2.i);              implementation_end;
+specification_end;
+			end;
+   V1 143.1 240
+			specifications active 'AC'
+				specification 'AC'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   group
+    line 136 219 136 227;
+    line 132 223 140 223;
+   end;
+   line 144 216 144 264;
+   ellipse 132.9 229.3 155.3 251.7 fill 16777215;
+   spline 136.1 239.8 141.4 234.2 146.7 245.2 151.9 239.8;
+  terminals
+   p high 144 216 fixed;
+   p low 144 264 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 21.63 {V};		// voltage
+	real f = 60.0 {Hz};			// frequency
+variables
+	real hidden current {A};
+equations
+	p.u = U * sin ( 2 * pi * f * time );
+   	current = p.i;implementation_end;
+specification_end;
+				specification 'DC'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   line 343 200 343 248;
+   ellipse 332.3 213.3 354.7 235.7 fill 16777215;
+   line 332.2 206.4 339.7 206.4;
+   line 335.4 203.2 335.4 210.7;
+  terminals
+   p high 343 200 fixed;
+   p low 343 248 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 1 {V};		// voltage
+variables
+	real hidden current {A};
+equations
+	p.u = U;
+	current = p.i;             implementation_end;
+specification_end;
+			end;
+   X1 280 144.5
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Inductor.emx</LibraryPath><TimeStamp>2007-9-25 11:57:43</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Inductor
+     ports
+      electric delta in p;
+     restrictions
+      causality preferred in p;
+    end;
+    icon ipm ellipse bottom
+     figures
+      ellipse 274.1 136 286.9 151.5;
+      ellipse 286.9 136 299.7 151.5;
+      ellipse 261.3 136 274.1 151.5;
+      rectangle 261.3 145.1 299.7 152 color 16777215 fill 16777215;
+      line 256 144 261.3 144;
+      line 298.7 144 304 144;
+     terminals
+      p high 256 144 fixed;
+      p low 304 144 fixed;
+    end;
+    implementation eq
+parameters
+	real L = 0.00414 {H};			// inductance
+equations
+	p.u = L * ddt(p.i);
+    implementation_end;
+   X2 520 144.5
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Inductor.emx</LibraryPath><TimeStamp>2007-9-25 11:57:43</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Inductor
+     ports
+      electric delta in p;
+     restrictions
+      causality preferred in p;
+    end;
+    icon ipm ellipse bottom
+     figures
+      ellipse 514.1 136 526.9 151.5;
+      ellipse 526.9 136 539.7 151.5;
+      ellipse 501.3 136 514.1 151.5;
+      rectangle 501.3 145.1 539.7 152 color 16777215 fill 16777215;
+      line 496 144 501.3 144;
+      line 538.7 144 544 144;
+     terminals
+      p high 496 144 fixed;
+      p low 544 144 fixed;
+    end;
+    implementation eq
+parameters
+	real L = 0.00414 {H};			// inductance
+equations
+	p.u = L * ddt(p.i);
+    implementation_end;
+   Xm1 367.5 240
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Inductor.emx</LibraryPath><TimeStamp>2007-9-25 11:57:43</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Inductor
+     ports
+      electric delta in p;
+     restrictions
+      causality preferred in p;
+    end;
+    icon ipm bottom
+     figures
+      ellipse 360.5 234.1 376 246.9;
+      ellipse 360.5 246.9 376 259.7;
+      ellipse 360.5 221.3 376 234.1;
+      rectangle 360 221.3 366.9 259.7 color 16777215 fill 16777215;
+      line 368 216 368 221.3;
+      line 368 258.7 368 264;
+     terminals
+      p high 368 216 fixed;
+      p low 368 264 fixed;
+    end;
+    implementation eq
+parameters
+	real L = 0.504 {H};			// inductance
+equations
+	p.u = L * ddt(p.i);
+    implementation_end;
+  end;
+  connections
+   V1\p_high => R1\p_high 144 144;
+   Tr\p_2_high => X2\p_high 440 144;
+   X2\p_low => R2\p_high;
+   Tr\p_2_low <= Node2\p 440 328;
+   R2\p_low => RL\p_high 712 144;
+   V1\p_low <= Node1\p 144 328;
+   Node1\p <= Node4\p;
+   Node3\p => Node5\p;
+   Rc1\p_high <= Node3\p;
+   Node4\p <= Node6\p;
+   Rc1\p_low => Node4\p;
+   Xm1\p_high <= Node5\p;
+   Node5\p => Tr\p_1_high 408 144;
+   Node6\p <= Tr\p_1_low 408 328;
+   Ground\p => Node1\p;
+   Xm1\p_low => Node6\p;
+   Node2\p <= RL\p_low 712 328;
+   Ground1\p => Node2\p;
+   R1\p_low => X1\p_high;
+   X1\p_low => Node3\p;
+  end;
+ implementation_end;
+]]>
+</Sidops>
+ </Model>
+ <Experiments>
+     <DefaultExperiment><![CDATA[Experiment 1]]>
+</DefaultExperiment>
+  <Experiment>
+    <Name>Experiment 1</Name>
+    <CreatedBy></CreatedBy>
+    <Info></Info>
+<ExpData>
+  <VersionNumber>4.5</VersionNumber>
+  <ModelProperties>
+  </ModelProperties>
+  <Variables>
+   <Constants>
+   </Constants>
+   <Parameters>
+   </Parameters>
+   <Initials>
+    <Variable>
+     <Name>X1\p.i_initial</Name>
+     <Unit>A</Unit>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>X2\p.i_initial</Name>
+     <Unit>A</Unit>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>Xm1\p.i_initial</Name>
+     <Unit>A</Unit>
+     <Value>0</Value>
+    </Variable>
+   </Initials>
+  </Variables>
+  <PlotSpecs>
+   <VarNames>
+    <VarName>time</VarName>
+    <VarName>Tr\p_1.u</VarName>
+    <VarName>R1\p.i</VarName>
+    <VarName>Tr\p_2.u</VarName>
+    <VarName>R2\p.i</VarName>
+    <VarName>Tr\p_1.i</VarName>
+    <VarName>Tr\p_2.i</VarName>
+   </VarNames>
+   <Plots>
+    <Plot>
+     <PlotType>GraphPlot</PlotType>
+     <BasePlot>
+       <PlotId>1</PlotId>
+       <UseWindowsBGColor>true</UseWindowsBGColor>
+       <BGColor>15790320</BGColor>
+       <PlotIsVisible>true</PlotIsVisible>
+     </BasePlot>
+     <Grid>
+      <DrawGrid>true</DrawGrid>
+      <GridColor>15780518</GridColor>
+      <XTicks>10</XTicks>
+      <YTicks>10</YTicks>
+      <ZTicks>10</ZTicks>
+      <Use3DLook>false</Use3DLook>
+     </Grid>
+     <PlotBGColor>16777215</PlotBGColor>
+     <ShowPlotTitle>true</ShowPlotTitle>
+     <TitlePosition>1</TitlePosition>
+     <PlotTitle>model</PlotTitle>
+     <ShowXValues>true</ShowXValues>
+     <Fonts>
+      <TitleFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </TitleFont>
+      <LabelFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </LabelFont>
+      <ValuesFont>
+       <Name>Arial</Name>
+       <Height>10</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </ValuesFont>
+     </Fonts>
+     <SharedXAxis>true</SharedXAxis>
+     <SharedYAxis>true</SharedYAxis>
+     <SharedZAxis>false</SharedZAxis>
+     <XAxes>
+      <Axis>
+       <Minimum>0</Minimum>
+       <Maximum>1</Maximum>
+       <Linear>true</Linear>
+       <Scaling>3</Scaling>
+       <Label>time</Label>
+      </Axis>
+     </XAxes>
+     <YAxes>
+      <Axis>
+       <Minimum>-25</Minimum>
+       <Maximum>25</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Tens&atilde;o Eficar do Primario</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-25</Minimum>
+       <Maximum>25</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Corrente Primario (R1)</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-25</Minimum>
+       <Maximum>25</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Tens&atilde;o Eficaz Secundario</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-25</Minimum>
+       <Maximum>25</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Corrente Eficaz Secundario(R2)</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-25</Minimum>
+       <Maximum>25</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>p_1.i</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-25</Minimum>
+       <Maximum>25</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>p_2.i</Label>
+      </Axis>
+     </YAxes>
+     <ZAxes>
+     </ZAxes>
+     <Curves>
+      <Curve>
+       <LineColor>16711680</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711680</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Tr\p_1.u</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>16711935</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711935</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>R1\p.i</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>255</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>255</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Tr\p_2.u</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>65280</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>65280</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>R2\p.i</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>0</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>0</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Tr\p_1.i</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>10040319</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>10040319</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Tr\p_2.i</VarName>
+       </YCurveData>
+      </Curve>
+     </Curves>
+     <Legenda>
+      <ShowLegenda>true</ShowLegenda>
+     </Legenda>
+    </Plot>
+   </Plots>
+   <PlotPanels>
+    <PlotPanel>
+     <PlotPanelId>1</PlotPanelId>
+     <PlotPanelVisible>true</PlotPanelVisible>
+     <Name>Window 1</Name>
+     <Tiling>0</Tiling>
+     <PlotIds>
+       <PlotId>1</PlotId>
+     </PlotIds>
+     <ToggleState>Base</ToggleState>
+    </PlotPanel>
+   </PlotPanels>
+   <WindowRectangles virtualDesktopWidth="1366" virtualDesktopHeight="768">
+     <WindowRectangle monitor="0" left="0" top="0" right="1366" bottom="768" plotpanelid="1">
+0.0944363 0.046875 0.905564 0.910156
+     </WindowRectangle>
+   </WindowRectangles>
+  </PlotSpecs>
+  <RunSpecs>
+   <SimulatorSettings>
+    <StartTime>0</StartTime>
+    <FinishTime>1</FinishTime>
+    <Warp>false</Warp>
+    <UseOutputAfterEach>false</UseOutputAfterEach>
+    <OutputAfterEach>0.1</OutputAfterEach>
+    <EventEpsilon>1e-006</EventEpsilon>
+    <AlgebraicTolerance>1e-007</AlgebraicTolerance>
+    <SteadyStateAnalysis>false</SteadyStateAnalysis>
+    <UpdateHoldInstructions>true</UpdateHoldInstructions>
+   </SimulatorSettings>
+   <IntegrationMethods>
+    <IntegrationMethod>
+     <Name>Euler</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BackwardEuler</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <StepSize>0.01</StepSize>
+     <Alpha>1</Alpha>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>AdamsBashforth</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta2</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta4</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta8</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <SafetyFactor>0.9</SafetyFactor>
+     <Factor1>0.33</Factor1>
+     <Factor2>6</Factor2>
+     <Beta>0</Beta>
+     <UseMaxNrSteps>false</UseMaxNrSteps>
+     <MaxNrSteps>100000</MaxNrSteps>
+     <UseStiffDetection>false</UseStiffDetection>
+     <MaxNrStiffnessSteps>1000</MaxNrStiffnessSteps>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKuttaFehlberg</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>VodeAdams</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <VodeUseBDF>true</VodeUseBDF>
+     <VodeUseNewton>true</VodeUseNewton>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BDFMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <UseFixedStepSize>false</UseFixedStepSize>
+     <FixedStepSize>0</FixedStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>MeBDFiMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <UseFixedStepSize>false</UseFixedStepSize>
+     <FixedStepSize>0</FixedStepSize>
+    </IntegrationMethod>
+    <SelectedIntegrationMethod>8</SelectedIntegrationMethod>
+   </IntegrationMethods>
+  </RunSpecs>
+  <MultipleRun>
+   <NrSteps>10</NrSteps>
+   <CopyFromStates>false</CopyFromStates>
+   <JoinParameterVariation>true</JoinParameterVariation>
+   <ClearAfterRun>true</ClearAfterRun>
+   <RedrawAfterRun>false</RedrawAfterRun>
+   <DrawDuringSimulation>true</DrawDuringSimulation>
+   <ActionBeforeOptimization>0</ActionBeforeOptimization>
+   <CompareValue>0</CompareValue>
+   <UseCompareValue>true</UseCompareValue>
+   <MultipleRunType>MultipleRun</MultipleRunType>
+   <Minimize>true</Minimize>
+   <OptimizationVariable></OptimizationVariable>
+   <ResulVarUsage>UseEndValue</ResulVarUsage>
+   <Tolerance>0.001</Tolerance>
+   <OptimizationMethod>BroydonFletcherGoldfarbShanno</OptimizationMethod>
+   <MultipleRunVariables>
+   </MultipleRunVariables>
+  </MultipleRun>
+  <ExportData>
+   <WriteAsText>true</WriteAsText>
+   <ReadAsText>true</ReadAsText>
+   <WriteHeader>true</WriteHeader>
+   <ReadHeader>true</ReadHeader>
+   <ReadFilename></ReadFilename>
+   <WriteFilename></WriteFilename>
+   <DoWrite>false</DoWrite>
+   <ExportVariables>
+   </ExportVariables>
+   <ImportVariables>
+   </ImportVariables>
+  </ExportData>
+  <BreakPoints>
+  </BreakPoints>
+  <AnimationPlayback>
+   <PlaybackSpeed>1</PlaybackSpeed>
+  </AnimationPlayback>
+</ExpData>
+  </Experiment>
+</Experiments>
+</Document>

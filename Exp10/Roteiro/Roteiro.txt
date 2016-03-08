@@ -1,0 +1,15 @@
+1 - Velocidade angular contra o tempo (até entrar em regime)
+
+2 - Torque gerado eletromagneticamente contra o tempo (idem)
+
+3 - Torque x rotação (curvas até entrar em regime)
+
+
+O objetivo é montar o modelo dinâmico com a abordagem de estado na segunda apresentação, que foi baseado no livro do Lyshevski. 
+Note que há 6 equações de estado, uma para cada fase do estator e rotor e duas para a parte mecânica. 
+A solução pode ser dada através do 20sim ou Matlab/Simulink se preferir. 
+
+Há dois exemplo para auxiliar: 
+
+- Um diagrama de blocos no 20sim que implementa um modelo parecido também do Lyshevski 
+- E uma sugestão de como montar os blocos no Simulink, separando cada equação das fases em três funções diferentes.

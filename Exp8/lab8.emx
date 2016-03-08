@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+ <Model version="4.5" build="4.5.1.5561">
+  <Sidops><![CDATA[model 128.1 184
+ description '<Information>
+ <Description>
+    <Version>4.5</Version>
+<IsMainModel>0</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+    <LibraryPath>C:\Users\Lucas\Google Drive\Unicamp\9o semestre\ES563\lab8.emx</LibraryPath>
+  <TimeStamp>2015-5-5 01:05:13</TimeStamp>
+</Description>
+</Information>';
+ type Mainmodel
+ end;
+ implementation bg
+  submodels
+   BeltPulley 492 142.3
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Mechanical\Rotation\Gears\BeltPulley.emx</LibraryPath>
+  <TimeStamp>2007-9-25 15:45:59</TimeStamp>
+</Description>';
+    type BeltPulley
+     ports
+      rotation psi in p_rot;
+      translation psi out p_trans;
+     restrictions
+      orientation constraint not_equal p_rot p_trans;
+      causality constraint not_equal p_rot p_trans;
+    end;
+    icon bg bottom
+     figures
+      group
+       line 478.5 156.7 482.5 152.7 fill 16443110;
+       line 482.5 156.7 486.5 152.7 fill 16443110;
+       line 486.5 156.7 490.5 152.7 fill 16443110;
+       line 490.5 156.7 494.5 152.7 fill 16443110;
+      end;
+      ellipse 479.3 127.9 495.3 143.9 fill 16777215;
+      line 488 128 512 128;
+      ellipse 485.3 133.9 489.3 137.9 fill 12632256;
+      line 487.3 135.9 479.3 151.9 495.3 151.9 487.3 135.9 fill 16443110;
+      line 472 136 488 136;
+     terminals
+      p_rot 472 136 fixed;
+      p_trans 512 128 fixed;
+    end;
+    implementation eq
+parameters
+	real radius = 0.1 {m};		// puley radius
+equations
+	p_trans.v = radius * p_rot.omega;
+	p_rot.T = radius * p_trans.F;    implementation_end;
+   Cycloid 104 136
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Sources\SignalGenerator-Cycloid.emx</LibraryPath>
+  <TimeStamp>2007-9-27 16:0:53</TimeStamp>
+</Description>';
+    type 'SignalGenerator-Cycloid'
+     ports
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 88 120 120 152 fill 15132390;
+      line 90.9 144 117.1 144;
+      line 93.1 128 93.1 146.2;
+      spline 93 144 97.8 142.1 104.2 132.8 116.3 130.7 color 16711680 fill 15132390;
+      line 113.8 144 113.8 130.7 fill 15132390 dotted;
+    end;
+    implementation eq
+parameters
+	real amplitude = 1.0 {none};
+	real start_time = 1.0 {s};
+	real stop_time = 2.0 {s};
+variables 
+	real hidden tDelta, cycl;
+	boolean hidden change;
+equations
+	"calculate at least at the start and stop time"
+	change = timeevent (start_time) or timeevent (stop_time);
+
+	"calculate the cycliod signal"
+	tDelta = 2 * pi * (time - start_time) / (stop_time - start_time);
+	cycl = amplitude * (tDelta - sin (tDelta)) / twopi;
+	output = if tDelta < 0.0 then 
+		0
+	else
+		if tDelta >= 0.0 and tDelta <= twopi then
+			cycl
+		else
+			amplitude
+		end
+	end;
+implementation_end;
+   Mass 592 128
+			specifications active 'Default'
+				specification 'Default'
+ description '<Information>
+ <Description>
+    <LibraryPath>Iconic Diagrams\Mechanical\Translation\Components\Mass.emx</LibraryPath>
+  <TimeStamp>2014-1-7 11:38:57</TimeStamp>
+  <Version>4.5</Version>
+<IsMainModel>1</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+  <AllowLibraryUpdate>True</AllowLibraryUpdate>
+  <Configuration>
+   <struct>
+    <member>
+     <name>DocumentationMask</name>
+     <value>
+     <struct/>     </value>
+    </member>
+   </struct>
+  </Configuration>
+ </Description>
+</Information>';
+ type Mass
+  ports
+   translation psi duplicatable in p;
+  restrictions
+   causality preferred in p;
+ end;
+ icon ipm bottom
+  figures
+   rectangle 576 112 608 144 fill 13421772;
+   text 'm' 592 128 15 italic;
+  terminals
+   p 592 128;
+   p 575 128;
+   p 592 145;
+ end;
+ implementation eq
+parameters
+	real m = 20.0 {kg};		// mass
+variables
+	real interesting x {m};
+	real a {m/s2};
+equations
+	a = p.F / m;
+	p.v = int (a);
+	x = int (p.v);
+implementation_end;
+specification_end;
+				specification 'Gravity'
+description '<Information>
+ <Description>
+    <Version>4.3</Version>
+<IsMainModel>1</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+    <LibraryPath>Iconic Diagrams\Mechanical\Translation\Components\Mass.emx</LibraryPath>
+  <TimeStamp>2013-4-18 16:28:16</TimeStamp>
+</Description>
+</Information>';
+ type Mass
+  ports
+   translation psi duplicatable in p;
+  restrictions
+   causality preferred in p;
+ end;
+ icon ipm bottom
+  figures
+   rectangle 424 192 456 224 fill 13421772;
+   text 'm' 440 208 15 italic;
+   line 429 221 429 205 429 221 start;
+   text 'Fg' 430 199 11 italic;
+  terminals
+   p 440 208;
+   p 440 192;
+ end;
+ implementation eq
+parameters
+	real m = 1.0 {kg};			// mass
+	real g = 9.800665 {m/s^2};	// acceleration of gravity
+variables
+	real interesting x {m};
+	real a {m/s2};
+equations
+	a = (p.F / m) - g;
+	p.v = int (a);
+	x = int (p.v);
+
+implementation_end;
+specification_end;
+			end;
+   PID 240 136
+    description '<Description>
+ <Version>4.0</Version>
+ <IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Control\PID Control\Continuous\PID.emx</LibraryPath>
+  <TimeStamp>2008-1-17 10:49:30</TimeStamp>
+</Description>';
+    type PID
+     ports
+      signal in error;
+      signal out output;
+    end;
+    icon bg bottom
+     figures
+      rectangle 224 120 256 152 fill 15132390;
+      text 'PID' 240 135.5 color 16711680 18 bold;
+    end;
+    implementation eq
+parameters
+	real kp = 5000.0 {};			// Proportional gain
+	real tauD = 0.05 {s};		// Derivative time constant: tauD > 0
+	real beta = 0.1 {};		// Tameness constant: 0 < beta << 1
+	real tauI = 20.0 {s};		// Integral time constant: tauI > 0
+variables
+	real pdout, pdrate, pdstate;
+	real pirate, pistate;
+equations
+	pdrate = (kp * error - pdout) / (beta * tauD);
+	pdstate = int (pdrate);
+	pdout = pdstate + (kp * error / beta);
+	pirate = pdout / tauI;
+	pistate = int (pirate);
+	output = pistate + pdout;
+      implementation_end;
+   PlusMinus 176 136
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Signal\Block Diagram\PlusMinus.emx</LibraryPath>
+  <TimeStamp>2007-9-27 10:15:13</TimeStamp>
+</Description>';
+    knot PlusMinus
+     ports
+      signal knot duplicatable in plus [1];
+      signal knot duplicatable in minus [1];
+      signal knot out output [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 168 128 184 144 fill 16777215;
+    end;
+    implementation eq
+equations
+    output = sum (collect (plus)) - sum (collect (minus));
+    implementation_end;
+   PositionSensor 592 265.4
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Mechanical\Translation\Sensors\PositionSensor-Absolute.emx</LibraryPath>
+  <TimeStamp>2007-9-26 11:25:11</TimeStamp>
+</Description>';
+    type 'PositionSensor-Absolute'
+     ports
+      translation psi in p;
+      signal out x {m} ;
+     restrictions
+      causality fixed out p;
+    end;
+    icon bg bottom
+     figures
+      line 592 248 591.5 272;
+      ellipse 580.8 261.4 603.2 283.8 fill 16777215;
+      text 'P' 592 272.6 15;
+     terminals
+      p 592 248 fixed;
+      x 592 272 fixed;
+    end;
+    implementation eq
+equations
+	p.F = 0;
+	x = int (p.v);             implementation_end;
+   ServoMotor1 328.9 132.5
+    type ServoMotor
+     ports
+      rotation psi out p;
+      signal in i {A} ;
+     restrictions
+      causality fixed in p;
+    end;
+    icon bg bottom
+     figures
+      rectangle 353.8 132.8 369.1 135.8 fill 15132390;
+      rectangle 309.3 119 354.3 149 fill 15132390;
+      line 349.8 119 349.8 149 fill 15132390;
+      rectangle 354.3 121.5 357.3 145.5 fill 15132390;
+      text 'DC' 328.8 127.5 color 16711680 14;
+      text 'brushl' 330.8 139 color 16711680 14;
+      line 309.2 134.8 301.7 134.8 fill 15132390;
+      text 'i' 289.8 121 color 16711680 14;
+      text 'max' 299.3 125 color 16711680;
+     terminals
+      p 368 134.5 fixed;
+      i 300.5 134.5 fixed;
+    end;
+    implementation eq
+// 20-sim User Editor
+// MotorWizard.dll
+// C:\Program Files (x86)\20-sim 4.5\Tools\Servo Motor Dynamics\Faulhaber 2006.cse
+constants
+	string Name = 'Faulhaber 4490-036BS';				// name of motor
+	string Keyname = '4490-036BS';				// keyname of motor
+	string Info = 'brushless';				// info of motor
+/*	
+	string Date = '38770';				/ / Date of entry
+*/
+parameters
+/*
+	real Price = 0 {euro};				/ / Price in Euro
+	string Delivery_time = '0' {weeks};			/ / Delivery Time
+	real U_rms_nom = 66.7118 {V}; 				/ / nominal motor voltage
+	real P_nom = 209.859 {W};					/ / nominal power
+	real Life_nom = 0 {hour};				/ / nominal Lifetime
+	real F_axial = 0 {N};					/ / maximum axial force
+	real F_radial = 0 {N};				/ / maximum radial force
+	real m = 0{kg};					/ / motor mass
+	real D_motor = 0.044 {m};					/ / motor diameter
+	real L_motor = 0.09 {m};					/ / motor length
+	real D_shaft = 0 {m};				/ / shaft diameter
+	real L_shaft = 0 {m};				/ / shaft length
+	real T_100 = 0 {N.m};					/ / maximum torque at 100% duty cycle
+	real S = 0.00508159456233 {N.m.s/rad};				/ / motor steepness
+	real K_nom = 0.08251870523416 {N.m/A};				/ / torque constant at nom current
+	real K_max = 0.05895993776451 {N.m/A};				/ / torque constant at max current
+	real tau_m = 0.0025582521077871 {s};					/ / mechanical time constant
+	real tau_e = 0.00032462686567164 {s};					/ / electrical time constant
+	real P_dis = 0 {W};					/ / dissipated internal power
+	real tau_T1 = 29.000025 {s};					/ / rotor temperature time constant
+	real tau_T2 = 1756.000476 {s};					/ / stator temperature time constant
+*/
+	integer hidden Type = 6;				// Brushless DC
+	// Temperature dependencies
+	real alpha_c = 0.004; 					// temperature coefficient of resistivity of copper
+	real ktc = 0;				// temperature coefficient of torque constant
+	real R_25 = 1.34 {ohm}; 				// terminal resistance phase-phase at 25 C 
+	// electrical part
+	real L = 0.000435 {H}; 					// terminal inductance phase-phase
+	real fh = 2000.0 {Hz};					// differentiation limit Hz
+	// mechanical part
+	real J_rotor = 1.3e-005 {kg.m2/rad};			// rotor inertia
+	real T_fric = 0.00365 {N.m}; 				// friction and hysteresis
+	real d = 9.54929e-006 {N.m.s/rad};				// damping and eddy currents
+	real T_cog = 0 {N.m};					// cogging force
+	real poles = 0 {};					// number of poles (one pole pair = 2 poles)
+	// thermal part
+   	real RT1 = 1.35 {K/W}; 					// thermal resistance (coil to housing)
+   	real CT1 = 21.4815 {J/K};					// thermal capacity of coil
+   	real RT2 = 1.773 {K/W}; 					// thermal resistance (housing to environment)
+   	real CT2 = 990.412 {J/K};					// thermal capacity of housing
+	real Temp_amb = 25 {degC}; 				// ambient temperature
+	real Temp_initial = 25 {degC};			// starting temperature of the motor coils 
+	real Temp_max = 125 {degC}; 				// maximum temperature of the motor coils
+	// torque speed plotting
+	real T_max = 1.584 {N.m}; 				// maxium shaft torque at near zero speeds
+	real omega_max = 606.32738214283 {rad/s};				// maximum motor speed
+	real U_rms_max = 36 {V}; 				// maximum motor voltage
+	real I_rms_max = 26.8657 {A}; 				// maximum motor current
+	real P_max = 210 {W};					// maximum power	
+	real I_rms_nom = 3.63 {A}; 				// nominal motor current
+	real T_nom = 0.2004 {N.m}; 				// nominal shaft torque
+	real omega_nom = 1047.1975511966 {rad/s};				// nominal motor speed
+variables
+	// DYNAMICS
+	// temperature dependencies
+	real R {ohm};						// terminal resistance phase-phase at 25 C at simulated temperature
+	real K {N.m/A};						// torque constant at simulated temperature
+	real K_nom {N.m/A};					// torque constant at 25 C at nominal current
+	real K_max {N.m/A};					// torque constant at 25 C at maximum current
+	// electrical part
+	real hidden di_dt {A};					// derivative of the current
+	real u_tt_ff {V};					// maximum terminal (phase-phase) voltage
+	real hidden rate;
+	real hidden initial_input;
+	boolean hidden initialized;
+	// mechanical part
+	real phi {rad};						// shaft angle
+	real hidden T_m {N.m};					// motor torque
+	real hidden T_f {N.m};					// friction, damping, hysteresis and eddy currents torque
+	real hidden T_J {N.m};					// motor inertia torque 
+	real T_abs {N.m};					// absolute value of the output torque
+	real omega_abs {rad/s};					// absolute value of the output angular velocity
+	// thermal part
+	real Temp_coil {degC};					// coil temperature
+	real Temp_housing {degC};				// housing temperature
+	real hidden dQ_el {W}; 					// heat generated by the coils
+	real hidden dQ_mech {W}; 				// heat generated by friction, damping, hysteresis and eddy currents torque
+	real hidden dQ_coil_housing {W};	 		// heat flow from coil to housing
+	real hidden dQ_housing_amb {W}; 			// heat flow from housing to ambient
+	// torque speed plotting
+	real simulation_time {s};				
+	real omega_range {rad/s};				// speed ranging from zero to over 5% of maximum speed
+	real T_range {N.m};					// torque ranging from zero to over 5% of maximum torque
+	real Torquemax {N.m};					// maximum torque
+	real Speedmax {rad/s};					// maximum speed
+	real T_max_power {N.m};					// torque at maximum power
+	real T_max_current {N.m};				// torque at maximum current
+	real T_max_outputpower {N.m};				// line of maxiumum output torque
+	real T_max_voltage {N.m};				// torque at maximum voltage
+	real T_max_efficiency {N.m};				// torque at maximum efficiency as function of "vrange"
+	real hidden R_work {ohm};				// resistance at working temperature
+	real hidden K_work {N.m/A};				// torque constant at working temperature
+	real hidden S_work {N.m.s/rad};				// steepness at working temperature 
+	real hidden S_max {N.m.s/rad};				// steepness at maximum temperature 
+	real hidden K_maxT {N.m/A};				// torque constant at maximum temperature
+	real hidden R_max {ohm};				// resistance at maxium temperature
+	real hidden K_temp {N.m/A};				// torque constant with temperature compensation
+	real hidden K_fall {N.m/A};				// decrease of torque constant for high currents
+	real hidden P_100 {W};					// generated heat for maximum allowable continuous torque, (i.e. a 100% duty cycle )
+	real T_100 {N.m};					// maximum allowable continuous torque, (i.e. a 100% duty cycle )
+	real T_50 {N.m};					// maximum allowable torque for a 50% duty cycle 
+	real T_25 {N.m};					// maximum allowable torque for a 25% duty cycle 
+	real T_10 {N.m};					// maximum allowable torque for a 10% duty cycle 
+initialequations
+	initialized = false;
+	// plot stuff
+	simulation_time = finishtime - starttime;
+	// nominal and maximum torque constant
+	K_nom = (T_nom + T_fric + d*omega_nom)/I_rms_nom;
+	K_max = T_max/I_rms_max;
+	// parameters at working temperature
+	R_work = (R_25 * (1+ alpha_c * (Temp_initial - 25))); 	
+	K_work = (K_nom * (1 + ktc * (Temp_initial - 25))); 	
+	S_work = (K_work^2)/R_work;
+	// parameters at maximum temperature
+	R_max = (R_25 * (1+ alpha_c * (Temp_max - 25))); 	
+	K_maxT = (K_nom * (1 + ktc * (Temp_max - 25))); 	
+	S_max = (K_maxT^2)/R_max;
+equations
+	// DYNAMICS
+	// voltage
+	if not initialized then 
+		initial_input = i; 
+		initialized = true;
+	end;
+	rate = -2*pi*fh * di_dt;
+	di_dt = 2*pi*fh * (i - initial_input) + int (rate,0); 
+	u_tt_ff = R*i + L*di_dt + K*p.omega;
+	// heat generated by the coils
+	dQ_el = R*i^2; 							
+	// mechanical part
+	T_m = K * i;
+	T_f = T_fric * tanh(1000 * p.omega) + d * p.omega + T_cog*sin(poles/2*phi);
+	T_J = T_m - T_f - p.T;
+	p.omega = int (T_J/J_rotor);
+	phi = int(p.omega);
+	// heat generated by magnetic hysteresis and friction
+	dQ_mech = T_f * p.omega; 	
+	// thermal part
+	// temperature dependency of coils (copper)
+	R = (R_25 * (1+ alpha_c * (Temp_coil - 25))); 	
+	// temperature and current dependency of torque constant
+	K_temp = (K_nom * (1 + ktc * (Temp_housing - 25))); 	
+	K_fall = if I_rms_max == I_rms_nom then 0 else (K_temp - K_max)*(abs(i) - I_rms_nom)^2 / (I_rms_max - I_rms_nom)^2 end;
+	K = if abs(i) < I_rms_nom then 
+			K_temp
+		else
+			if K_fall < K_temp then 
+				K_temp - K_fall
+			else
+				0
+			end
+		end;
+	// temperatures
+	Temp_coil = (1/CT1) * int(dQ_el + dQ_mech - dQ_coil_housing) + Temp_initial;
+	dQ_coil_housing = (Temp_coil - Temp_housing)/RT1;
+	// T_work = coil temperature. Stator temperature based on steady state: heat flow is constant
+	// and keeps coil temperature at T_work: prs_dQ = pse_dQ -> (T_work - Ts)/Rt1 = (Ts - T_amb)/Rt2 ->
+	// Ts = (T_work*Rt2 + T_amb*Rt1)/(Rt1+Rt2)
+	Temp_housing = (1/CT2) * int(dQ_coil_housing - dQ_housing_amb) + Temp_initial;	
+	dQ_housing_amb = (Temp_housing - Temp_amb)/RT2;
+	T_abs = abs (p.T);
+	omega_abs = abs(p.omega);
+	// TORQUE SPEED PLOT
+	// speed ranging from zero to over 5% of maximum speed
+	omega_range = time*(1.05*omega_max/simulation_time);
+	// torque ranging from zero to over 5% of maximum torque
+	T_range = time*(1.05*T_max/simulation_time);
+	// Maximum allowed motor torque
+	Torquemax = T_max - d*omega_range;
+	// Maximum allowed motor speed
+	Speedmax = 1.0*omega_max;	
+	// torque at maximum current
+	T_max_current = K_max * I_rms_max - (d*omega_range + T_fric);
+	// torque at maximum voltage
+	T_max_voltage = limit( S_work*(U_rms_max / K_work - omega_range) - d*omega_range - T_fric, 0, Torquemax);
+	// torque at maximum output power
+	T_max_power = if omega_range == 0 then
+			Torquemax
+		else
+			limit(P_max / omega_range - (d*omega_range + T_fric), 0, Torquemax)
+		end;
+	// line of torque for maximum output power
+	T_max_outputpower = limit( omega_range*(S_work + d),0,Torquemax);
+	// line of torque for maximum efficiency
+	T_max_efficiency = limit(S_work*sqrt((omega_range*(T_fric + d*omega_range))/(S_work + d) ) - T_fric - d*omega_range,0,Torquemax);
+	// duty cycles
+  	P_100 = ((Temp_max - Temp_amb) / (RT1 + RT2));
+	T_100 = limit(sqrt(S_max*limit(P_100 - omega_range*T_fric - d*omega_range^2,0,P_100)) -T_fric - d*omega_range,0,T_max); 
+	T_50 = T_100/sqrt(0.5);
+	T_25 = T_100/sqrt(0.25);
+	T_10 = T_100/sqrt(0.1);implementation_end;
+   Transmission 424 152.8
+			specifications active 'Ideal'
+				specification 'Efficiency'
+ description '<Information>
+ <Description>
+    <Version>4.5</Version>
+<IsMainModel>1</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+    <LibraryPath>Iconic Diagrams\Mechanical\Rotation\Gears\Transmission.emx</LibraryPath>
+  <TimeStamp>2014-11-4 20:07:47</TimeStamp>
+<AllowLibraryUpdate>True</AllowLibraryUpdate>
+  <Configuration>
+   <struct>
+    <member>
+     <name>DocumentationMask</name>
+     <value>
+      <struct></struct>
+     </value>
+    </member>
+   </struct>
+  </Configuration>
+ </Description>
+</Information>';
+ type Transmission
+  ports
+   rotation psi in p_in;
+   rotation psi out p_out;
+  restrictions
+   orientation constraint not_equal p_in p_out;
+   causality constraint not_equal p_in p_out;
+ end;
+ icon ipm bottom
+  figures
+   line 56 270.4 71.5 270.4;
+   line 71.5 298.6 87.5 298.6;
+   line 87.5 270.4 120 270.4;
+   group
+    line 71.5 282.4 71.5 314.7 width 2;
+    line 68.3 282.4 74.7 282.4 width 2;
+    line 68.3 314.7 74.7 314.7 width 2;
+   end;
+   group
+    line 71.5 263.1 71.5 275.4 width 2;
+    line 68.3 263.1 74.7 263.1 width 2;
+    line 68.3 277.4 74.7 277.4 width 2;
+   end;
+   group
+    line 87.5 257.7 87.5 285.7 width 2;
+    line 84.3 257.7 90.7 257.7 width 2;
+    line 84.3 285.7 90.7 285.7 width 2;
+   end;
+   group
+    line 87.5 292 87.5 306.2 width 2;
+    line 84.3 292 90.7 292 width 2;
+    line 84.3 306.2 90.7 306.2 width 2;
+   end;
+   line 68.3 323.3 74.7 323.3 color -1;
+   text '1' 62.9 260.3;
+   text 'i' 97.1 260.3 color 16711680;
+   group
+    line 101.7 266.6 105.9 260.6;
+    line 101.7 260.6 105.9 266.6;
+    line 108.1 260.6 112.3 266.6;
+    line 108.1 266.6 112.3 260.6;
+   end;
+   group
+    line 101.7 278.7 105.9 272.9;
+    line 101.7 272.9 105.9 278.7;
+    line 108.1 272.9 112.3 278.7;
+    line 108.1 278.7 112.3 272.9;
+   end;
+  terminals
+   p_in 56 270.4 fixed;
+   p_out 120 270.4 fixed;
+ end;
+ implementation eq
+parameters
+	real i = 10.0 {};				// gearbox ratio
+	real eff = 0.97 {};			// gearbox efficiency (0 < eff <= 1)
+variables
+	real dyn_eff;
+initialequations
+	dyn_eff = eff;
+equations
+	p_out.T = p_in.T*i*dyn_eff;
+	p_out.omega = p_in.omega/i;
+	dyn_eff = if (sign(dly(p_in.T,0.0))*sign(dly(p_in.omega,0.0))) >= 0 then eff else 1/eff end;
+	
+                     implementation_end;
+specification_end;
+				specification 'Ideal'
+ description '<Information>
+ <Description>
+    <Version>4.5</Version>
+<IsMainModel>1</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+    <LibraryPath>Iconic Diagrams\Mechanical\Rotation\Gears\Transmission.emx</LibraryPath>
+  <TimeStamp>2014-9-26 12:20:30</TimeStamp>
+<AllowLibraryUpdate>True</AllowLibraryUpdate>
+  <Configuration>
+   <struct>
+    <member>
+     <name>DocumentationMask</name>
+     <value>
+      <struct></struct>
+     </value>
+    </member>
+   </struct>
+  </Configuration>
+ </Description>
+</Information>';
+ type Transmission
+  ports
+   rotation psi in p_in;
+   rotation psi out p_out;
+  restrictions
+   orientation constraint not_equal p_in p_out;
+   causality constraint not_equal p_in p_out;
+ end;
+ icon ipm bottom
+  figures
+   group
+    line 400 136 415.5 136;
+    line 415.5 160.8 431.5 160.8;
+    line 431.5 136 448 136;
+    group
+     line 415.5 146.6 415.5 175.2 width 2;
+     line 412.3 146.6 418.7 146.6 width 2;
+     line 412.3 175.2 418.7 175.2 width 2;
+    end;
+    group
+     line 415.5 129.7 415.5 140.3 width 2;
+     line 412.3 129.7 418.7 129.7 width 2;
+     line 412.3 142.1 418.7 142.1 width 2;
+    end;
+    group
+     line 431.5 124.7 431.5 149.5 width 2;
+     line 428.3 124.7 434.7 124.7 width 2;
+     line 428.3 149.5 434.7 149.5 width 2;
+    end;
+    group
+     line 431.5 155.1 431.5 167.5 width 2;
+     line 428.3 155.1 434.7 155.1 width 2;
+     line 428.3 167.5 434.7 167.5 width 2;
+    end;
+    line 412.3 182.7 418.7 182.7 color -1;
+    text '1' 406.9 127;
+    text 'i' 441.1 127 color 16711680;
+   end;
+  terminals
+   p_in 400 136 fixed;
+   p_out 448 136 fixed;
+ end;
+ implementation eq
+parameters
+	real i = 60.0 {};				// gearbox ratio
+equations
+	p_out.T = p_in.T*i;
+	p_out.omega = p_in.omega/i;
+                     implementation_end;
+specification_end;
+				specification 'Lossy'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Mechanical\Rotation\Gears\Transmission.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type Transmission
+  ports
+   rotation psi in p_in;
+   rotation psi out p_out;
+  restrictions
+   orientation constraint not_equal p_in p_out;
+   causality preferred in p_out;
+   causality preferred in p_in;
+ end;
+ icon ipm bottom
+  figures
+   group
+    group
+     line 171.7 510.3 175.9 505.3;
+     line 171.7 505.3 175.9 510.3;
+     line 178.1 505.3 182.3 510.3;
+     line 178.1 510.3 182.3 505.3;
+    end;
+    group
+     line 171.7 520 175.9 515.1;
+     line 171.7 515.1 175.9 520;
+     line 178.1 515.1 182.3 520;
+     line 178.1 520 182.3 515.1;
+    end;
+   end;
+   line 88 512.8 148.8 512.8;
+   line 164.8 512.4 192 512.8;
+   rectangle 103.5 493.4 135.5 530 fill 13421772;
+   text 'J' 119.2 511.9 15 italic;
+   line 149 534.4 165 534.4;
+   group
+    line 149 522.4 149 547.9 width 2;
+    line 145.8 522.4 152.2 522.4 width 2;
+    line 145.8 547.9 152.2 547.9 width 2;
+   end;
+   group
+    line 149 507.1 149 517 width 2;
+    line 145.8 507.1 152.2 507.1 width 2;
+    line 145.8 518.2 152.2 518.2 width 2;
+   end;
+   group
+    line 165 502.7 165 524.7 width 2;
+    line 161.8 502.7 168.2 502.7 width 2;
+    line 161.8 524.7 168.2 524.7 width 2;
+   end;
+   group
+    line 165 529.5 165 540.6 width 2;
+    line 161.8 529.5 168.2 529.5 width 2;
+    line 161.8 540.6 168.2 540.6 width 2;
+   end;
+   line 145.8 554.1 152.2 554.1 color -1;
+   text '1' 141.4 504.9;
+   text 'i' 172.3 497.7 color 16711680;
+  terminals
+   p_in 88 512.8 fixed;
+   p_out 192 512.8 fixed;
+ end;
+ implementation eq
+parameters
+	real i = 10.0 {};					// gearbox ratio
+	real eff = 0.97 {};					// gearbox efficiency (0 < eff <= 1)
+	real J = 1.0e-5 {kg.m2/rad};		// rotational inertia
+variables
+	real p_in_T;
+	real dyn_eff;
+initialequations
+	dyn_eff = eff;
+equations
+	p_in.omega = (1/J)*int(p_in.T - p_in_T);
+	p_out.T = p_in_T*i*dyn_eff;
+	p_out.omega = p_in.omega/i;
+	dyn_eff = if (sign(dly(p_in_T,0.0))*sign(dly(p_in.omega,0.0))) >= 0 then eff else 1/eff end;
+implementation_end;
+specification_end;
+			end;
+  end;
+  connections
+   ServoMotor1\p => Transmission\p_in;
+   Transmission\p_out => BeltPulley\p_rot;
+   BeltPulley\p_trans => Mass\p;
+   Mass\p => PositionSensor\p;
+   Cycloid\output -> PlusMinus\plus;
+   PlusMinus\output -> PID\error;
+   PID\output -> ServoMotor1\i;
+   PositionSensor\x -> PlusMinus\minus 176 272;
+  end;
+ implementation_end;
+]]>
+</Sidops>
+ </Model>
+ <Experiments>
+     <DefaultExperiment><![CDATA[Experiment 1]]>
+</DefaultExperiment>
+  <Experiment>
+    <Name>Experiment 1</Name>
+    <CreatedBy></CreatedBy>
+    <Info></Info>
+<ExpData>
+  <VersionNumber>4.5</VersionNumber>
+  <ModelProperties>
+  </ModelProperties>
+  <Variables>
+   <Constants>
+   </Constants>
+   <Parameters>
+   </Parameters>
+   <Initials>
+    <Variable>
+     <Name>Mass\x_initial</Name>
+     <Unit>m</Unit>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>PID\pdstate_initial</Name>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>PID\pistate_initial</Name>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>PositionSensor\x_initial</Name>
+     <Unit>m</Unit>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>ServoMotor1\p.omega_initial</Name>
+     <Unit>rad/s</Unit>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>ServoMotor1\phi_initial</Name>
+     <Unit>rad</Unit>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>ServoMotor1\Temp_coil_state_initial</Name>
+     <Value>0</Value>
+    </Variable>
+    <Variable>
+     <Name>ServoMotor1\Temp_housing_state_initial</Name>
+     <Value>0</Value>
+    </Variable>
+   </Initials>
+  </Variables>
+  <PlotSpecs>
+   <VarNames>
+    <VarName>time</VarName>
+    <VarName>Cycloid\output</VarName>
+    <VarName>PositionSensor\x</VarName>
+    <VarName>ServoMotor1\Torquemax</VarName>
+    <VarName>ServoMotor1\T_100</VarName>
+    <VarName>ServoMotor1\T_25</VarName>
+    <VarName>ServoMotor1\T_abs</VarName>
+    <VarName>ServoMotor1\omega_range</VarName>
+    <VarName>ServoMotor1\omega_abs</VarName>
+    <VarName>ServoMotor1\Temp_coil</VarName>
+    <VarName>ServoMotor1\Temp_housing</VarName>
+    <VarName>ServoMotor1\T_50</VarName>
+   </VarNames>
+   <Plots>
+    <Plot>
+     <PlotType>GraphPlot</PlotType>
+     <BasePlot>
+       <PlotId>1</PlotId>
+       <UseWindowsBGColor>true</UseWindowsBGColor>
+       <BGColor>15790320</BGColor>
+       <PlotIsVisible>true</PlotIsVisible>
+     </BasePlot>
+     <Grid>
+      <DrawGrid>true</DrawGrid>
+      <GridColor>15780518</GridColor>
+      <XTicks>10</XTicks>
+      <YTicks>10</YTicks>
+      <ZTicks>10</ZTicks>
+      <Use3DLook>false</Use3DLook>
+     </Grid>
+     <PlotBGColor>16777215</PlotBGColor>
+     <ShowPlotTitle>true</ShowPlotTitle>
+     <TitlePosition>1</TitlePosition>
+     <PlotTitle>position</PlotTitle>
+     <ShowXValues>true</ShowXValues>
+     <Fonts>
+      <TitleFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </TitleFont>
+      <LabelFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </LabelFont>
+      <ValuesFont>
+       <Name>Arial</Name>
+       <Height>10</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </ValuesFont>
+     </Fonts>
+     <SharedXAxis>true</SharedXAxis>
+     <SharedYAxis>true</SharedYAxis>
+     <SharedZAxis>false</SharedZAxis>
+     <XAxes>
+      <Axis>
+       <Minimum>0</Minimum>
+       <Maximum>4</Maximum>
+       <Linear>true</Linear>
+       <Scaling>3</Scaling>
+       <Label>time</Label>
+      </Axis>
+     </XAxes>
+     <YAxes>
+      <Axis>
+       <Minimum>-0.4</Minimum>
+       <Maximum>1.6</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>output</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-20</Minimum>
+       <Maximum>30</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>x</Label>
+      </Axis>
+     </YAxes>
+     <ZAxes>
+     </ZAxes>
+     <Curves>
+      <Curve>
+       <LineColor>16711680</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711680</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Cycloid\output</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>16711935</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711935</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>PositionSensor\x</VarName>
+       </YCurveData>
+      </Curve>
+     </Curves>
+     <Legenda>
+      <ShowLegenda>true</ShowLegenda>
+     </Legenda>
+    </Plot>
+    <Plot>
+     <PlotType>GraphPlot</PlotType>
+     <BasePlot>
+       <PlotId>2</PlotId>
+       <UseWindowsBGColor>true</UseWindowsBGColor>
+       <BGColor>15790320</BGColor>
+       <PlotIsVisible>true</PlotIsVisible>
+     </BasePlot>
+     <Grid>
+      <DrawGrid>true</DrawGrid>
+      <GridColor>15780518</GridColor>
+      <XTicks>10</XTicks>
+      <YTicks>10</YTicks>
+      <ZTicks>10</ZTicks>
+      <Use3DLook>false</Use3DLook>
+     </Grid>
+     <PlotBGColor>16777215</PlotBGColor>
+     <ShowPlotTitle>true</ShowPlotTitle>
+     <TitlePosition>1</TitlePosition>
+     <PlotTitle>lab8</PlotTitle>
+     <ShowXValues>true</ShowXValues>
+     <Fonts>
+      <TitleFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </TitleFont>
+      <LabelFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </LabelFont>
+      <ValuesFont>
+       <Name>Arial</Name>
+       <Height>10</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </ValuesFont>
+     </Fonts>
+     <SharedXAxis>true</SharedXAxis>
+     <SharedYAxis>true</SharedYAxis>
+     <SharedZAxis>false</SharedZAxis>
+     <XAxes>
+      <Axis>
+       <Minimum>0</Minimum>
+       <Maximum>1203.03932443789</Maximum>
+       <Linear>true</Linear>
+       <Scaling>3</Scaling>
+       <Label>omega_range</Label>
+      </Axis>
+     </XAxes>
+     <YAxes>
+      <Axis>
+       <Minimum>-0.2</Minimum>
+       <Maximum>1.8</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Torquemax</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-0.2</Minimum>
+       <Maximum>1.8</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>T_100</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-0.2</Minimum>
+       <Maximum>1.8</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>T_25</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-0.2</Minimum>
+       <Maximum>1.8</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>T_abs</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-0.2</Minimum>
+       <Maximum>1.8</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>T_50</Label>
+      </Axis>
+     </YAxes>
+     <ZAxes>
+     </ZAxes>
+     <Curves>
+      <Curve>
+       <LineColor>16711680</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711680</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\omega_range</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\Torquemax</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>16711935</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711935</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\omega_range</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\T_100</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>255</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>255</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\omega_range</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\T_25</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>65280</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>65280</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\omega_abs</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\T_abs</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>0</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>0</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\omega_range</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\T_50</VarName>
+       </YCurveData>
+      </Curve>
+     </Curves>
+     <Legenda>
+      <ShowLegenda>true</ShowLegenda>
+     </Legenda>
+    </Plot>
+    <Plot>
+     <PlotType>GraphPlot</PlotType>
+     <BasePlot>
+       <PlotId>3</PlotId>
+       <UseWindowsBGColor>true</UseWindowsBGColor>
+       <BGColor>15790320</BGColor>
+       <PlotIsVisible>true</PlotIsVisible>
+     </BasePlot>
+     <Grid>
+      <DrawGrid>true</DrawGrid>
+      <GridColor>15780518</GridColor>
+      <XTicks>10</XTicks>
+      <YTicks>10</YTicks>
+      <ZTicks>10</ZTicks>
+      <Use3DLook>false</Use3DLook>
+     </Grid>
+     <PlotBGColor>16777215</PlotBGColor>
+     <ShowPlotTitle>true</ShowPlotTitle>
+     <TitlePosition>1</TitlePosition>
+     <PlotTitle>model</PlotTitle>
+     <ShowXValues>true</ShowXValues>
+     <Fonts>
+      <TitleFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </TitleFont>
+      <LabelFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </LabelFont>
+      <ValuesFont>
+       <Name>Arial</Name>
+       <Height>10</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </ValuesFont>
+     </Fonts>
+     <SharedXAxis>true</SharedXAxis>
+     <SharedYAxis>true</SharedYAxis>
+     <SharedZAxis>false</SharedZAxis>
+     <XAxes>
+      <Axis>
+       <Minimum>0</Minimum>
+       <Maximum>4</Maximum>
+       <Linear>true</Linear>
+       <Scaling>3</Scaling>
+       <Label>time</Label>
+      </Axis>
+     </XAxes>
+     <YAxes>
+      <Axis>
+       <Minimum>24.4</Minimum>
+       <Maximum>26.4</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Temp_coil</Label>
+      </Axis>
+      <Axis>
+       <Minimum>0</Minimum>
+       <Maximum>51.763929943968</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Temp_housing</Label>
+      </Axis>
+     </YAxes>
+     <ZAxes>
+     </ZAxes>
+     <Curves>
+      <Curve>
+       <LineColor>16711680</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711680</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\Temp_coil</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>16711935</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711935</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>ServoMotor1\Temp_housing</VarName>
+       </YCurveData>
+      </Curve>
+     </Curves>
+     <Legenda>
+      <ShowLegenda>true</ShowLegenda>
+     </Legenda>
+    </Plot>
+   </Plots>
+   <PlotPanels>
+    <PlotPanel>
+     <PlotPanelId>1</PlotPanelId>
+     <PlotPanelVisible>true</PlotPanelVisible>
+     <Name>Window 1</Name>
+     <Tiling>0</Tiling>
+     <PlotIds>
+       <PlotId>1</PlotId>
+       <PlotId>3</PlotId>
+     </PlotIds>
+     <ToggleState>Base</ToggleState>
+    </PlotPanel>
+    <PlotPanel>
+     <PlotPanelId>2</PlotPanelId>
+     <PlotPanelVisible>true</PlotPanelVisible>
+     <Name>Window 2</Name>
+     <Tiling>0</Tiling>
+     <PlotIds>
+       <PlotId>2</PlotId>
+     </PlotIds>
+     <ToggleState>Base</ToggleState>
+    </PlotPanel>
+   </PlotPanels>
+   <WindowRectangles virtualDesktopWidth="1366" virtualDesktopHeight="768">
+     <WindowRectangle monitor="0" left="0" top="0" right="1366" bottom="768" plotpanelid="2">
+0.00585652 0.0403646 0.494143 0.9375
+     </WindowRectangle>
+     <WindowRectangle monitor="0" left="0" top="0" right="1366" bottom="768" plotpanelid="1">
+0.5 0 1 0.947917
+     </WindowRectangle>
+   </WindowRectangles>
+  </PlotSpecs>
+  <RunSpecs>
+   <SimulatorSettings>
+    <StartTime>0</StartTime>
+    <FinishTime>4</FinishTime>
+    <Warp>false</Warp>
+    <UseOutputAfterEach>false</UseOutputAfterEach>
+    <OutputAfterEach>0.1</OutputAfterEach>
+    <EventEpsilon>1e-006</EventEpsilon>
+    <AlgebraicTolerance>1e-007</AlgebraicTolerance>
+    <SteadyStateAnalysis>false</SteadyStateAnalysis>
+    <UpdateHoldInstructions>true</UpdateHoldInstructions>
+   </SimulatorSettings>
+   <IntegrationMethods>
+    <IntegrationMethod>
+     <Name>Euler</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BackwardEuler</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <StepSize>0.01</StepSize>
+     <Alpha>1</Alpha>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>AdamsBashforth</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta2</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta4</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta8</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <SafetyFactor>0.9</SafetyFactor>
+     <Factor1>0.33</Factor1>
+     <Factor2>6</Factor2>
+     <Beta>0</Beta>
+     <UseMaxNrSteps>false</UseMaxNrSteps>
+     <MaxNrSteps>100000</MaxNrSteps>
+     <UseStiffDetection>false</UseStiffDetection>
+     <MaxNrStiffnessSteps>1000</MaxNrStiffnessSteps>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKuttaFehlberg</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>VodeAdams</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <VodeUseBDF>true</VodeUseBDF>
+     <VodeUseNewton>true</VodeUseNewton>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BDFMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <UseFixedStepSize>false</UseFixedStepSize>
+     <FixedStepSize>0</FixedStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>MeBDFiMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <UseFixedStepSize>false</UseFixedStepSize>
+     <FixedStepSize>0</FixedStepSize>
+    </IntegrationMethod>
+    <SelectedIntegrationMethod>7</SelectedIntegrationMethod>
+   </IntegrationMethods>
+  </RunSpecs>
+  <MultipleRun>
+   <NrSteps>10</NrSteps>
+   <CopyFromStates>false</CopyFromStates>
+   <JoinParameterVariation>true</JoinParameterVariation>
+   <ClearAfterRun>true</ClearAfterRun>
+   <RedrawAfterRun>false</RedrawAfterRun>
+   <DrawDuringSimulation>true</DrawDuringSimulation>
+   <ActionBeforeOptimization>0</ActionBeforeOptimization>
+   <CompareValue>0</CompareValue>
+   <UseCompareValue>true</UseCompareValue>
+   <MultipleRunType>MultipleRun</MultipleRunType>
+   <Minimize>true</Minimize>
+   <OptimizationVariable></OptimizationVariable>
+   <ResulVarUsage>UseEndValue</ResulVarUsage>
+   <Tolerance>0.001</Tolerance>
+   <OptimizationMethod>BroydonFletcherGoldfarbShanno</OptimizationMethod>
+   <MultipleRunVariables>
+   </MultipleRunVariables>
+  </MultipleRun>
+  <ExportData>
+   <WriteAsText>true</WriteAsText>
+   <ReadAsText>true</ReadAsText>
+   <WriteHeader>true</WriteHeader>
+   <ReadHeader>true</ReadHeader>
+   <ReadFilename></ReadFilename>
+   <WriteFilename></WriteFilename>
+   <DoWrite>false</DoWrite>
+   <ExportVariables>
+     <ExportVariable>
+       <VariableName>time</VariableName>
+     </ExportVariable>
+   </ExportVariables>
+   <ImportVariables>
+   </ImportVariables>
+  </ExportData>
+  <BreakPoints>
+  </BreakPoints>
+  <AnimationPlayback>
+   <PlaybackSpeed>1</PlaybackSpeed>
+  </AnimationPlayback>
+</ExpData>
+  </Experiment>
+</Experiments>
+</Document>

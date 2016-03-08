@@ -1,0 +1,4 @@
+Comparando-se os valores de corrente do circuito equivalente com os valores de corrente do estático,
+nas duas aplicações de carga(50 e 100%) é observado uma semelhança muito grande, tanto no comportamento 
+quanto na magnitude, de tal forma que se conclui que o modelo estático representa fielmente o modelo 
+do motor no circuito equivalente.

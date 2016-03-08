@@ -1,0 +1,4 @@
+torque nominal da máquina do pré: 3.2e-4 Nm = 0.00032 Nm
+corrente nominal da máquina do pré: 0,211 A
+velocidade nominal da máquina do pré: 7850rpm
+

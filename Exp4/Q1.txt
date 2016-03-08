@@ -1,0 +1,9 @@
+Adicionando carga ao motor, o torque aplicado por essa carga ao motor irá aumentar proporcionalmente.
+
+Dessa forma, em regime estacionário, o torque do motor terá a mesma magnitude do torque da carga, ou seja, também aumentará.
+
+Então, como mantivemos a potência constante, a velocidade irá diminuir com o aumento do torque, pois:
+
+Potência = (Torque)x(VelAngular)
+VelAngular = Potência/Torque
+

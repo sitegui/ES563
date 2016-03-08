@@ -1,0 +1,1580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+ <Model version="4.5" build="4.5.1.5561">
+  <Sidops><![CDATA[model 128.1 184
+ description '<Information>
+ <Description>
+    <Version>4.5</Version>
+<IsMainModel>0</IsMainModel>
+  <KeepParameterValues>False</KeepParameterValues>
+    <LibraryPath>C:\Users\Guilherme\Google Drive\ES563\Exp2\Exp2.Fig3.emx</LibraryPath>
+  <TimeStamp>2015-3-17 20:49:45</TimeStamp>
+</Description>
+</Information>';
+ type Mainmodel
+ end;
+ implementation bg
+  submodels
+   Ground 32 280
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Ground.emx</LibraryPath>
+  <TimeStamp>2007-9-25 11:57:33</TimeStamp>
+</Description>';
+    type Ground
+     ports
+      electric psi duplicatable in p;
+     restrictions
+      causality fixed out p;
+    end;
+    icon ipm bottom
+     figures
+      line 24 280 40 280;
+      line 26.7 284.3 37.3 284.3;
+      line 29.3 288 34.7 288;
+      line 32 272 32 280;
+     terminals
+      p 32 272 fixed;
+      p 32 272 fixed;
+      p 32 272 fixed;
+    end;
+    implementation eq
+equations
+	p.u = 0;
+ implementation_end;
+   Ground1 968 248
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Ground.emx</LibraryPath>
+  <TimeStamp>2007-9-25 11:57:33</TimeStamp>
+</Description>';
+    type Ground
+     ports
+      electric psi duplicatable in p;
+     restrictions
+      causality fixed out p;
+    end;
+    icon ipm bottom
+     figures
+      line 960 248 976 248;
+      line 962.7 252.3 973.3 252.3;
+      line 965.3 256 970.7 256;
+      line 968 240 968 248;
+     terminals
+      p 968 240 fixed;
+      p 968 240 fixed;
+      p 968 240 fixed;
+    end;
+    implementation eq
+equations
+	p.u = 0;
+ implementation_end;
+   Ground2 688 288
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Ground.emx</LibraryPath>
+  <TimeStamp>2007-9-25 11:57:33</TimeStamp>
+</Description>';
+    type Ground
+     ports
+      electric psi duplicatable in p;
+     restrictions
+      causality fixed out p;
+    end;
+    icon ipm bottom
+     figures
+      line 680 288 696 288;
+      line 682.7 292.3 693.3 292.3;
+      line 685.3 296 690.7 296;
+      line 688 280 688 288;
+     terminals
+      p 688 280 fixed;
+      p 688 280 fixed;
+      p 688 280 fixed;
+      p 688 280 fixed;
+    end;
+    implementation eq
+equations
+	p.u = 0;
+ implementation_end;
+   Node1 87.9 223.9
+    description '<Description><Version>4.0</Version>
+   <LibraryPath>C:\Program Files\20-sim 4.0\System\Node.emx</LibraryPath>
+  <TimeStamp>2007-10-31 11:27:14</TimeStamp>
+<IsMainModel>1</IsMainModel>
+ <KeepParameterValues>False</KeepParameterValues>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 84.8 220.8 91.2 227.2 color -1 fill 0;
+      ellipse 83.7 219.7 92.2 228.2 color -1;
+     terminals
+      p 88 224 fixed;
+      p 88 224 fixed;
+      p 88 224 fixed;
+      p 88 224 fixed;
+      p 88 224 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node10 823.9 207.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 820.8 204.8 827.2 211.2 color -1 fill 0;
+      ellipse 819.7 203.7 828.2 212.2 color -1;
+     terminals
+      p 824 208 fixed;
+      p 824 208 fixed;
+      p 824 208 fixed;
+      p 824 208 fixed;
+      p 824 208 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node12 527.9 231.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 524.8 228.8 531.2 235.2 color -1 fill 0;
+      ellipse 523.7 227.7 532.2 236.2 color -1;
+     terminals
+      p 528 232 fixed;
+      p 528 232 fixed;
+      p 528 232 fixed;
+      p 528 232 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node13 631.9 279.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 628.8 276.8 635.2 283.2 color -1 fill 0;
+      ellipse 627.7 275.7 636.2 284.2 color -1;
+     terminals
+      p 632 280 fixed;
+      p 632 280 fixed;
+      p 632 280 fixed;
+      p 632 280 fixed;
+      p 632 280 fixed;
+      p 632 280 fixed;
+      p 632 280 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node14 319.9 327.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 316.8 324.8 323.2 331.2 color -1 fill 0;
+      ellipse 315.7 323.7 324.2 332.2 color -1;
+     terminals
+      p 320 328 fixed;
+      p 320 328 fixed;
+      p 320 328 fixed;
+      p 320 328 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node15 423.9 303.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 420.8 300.8 427.2 307.2 color -1 fill 0;
+      ellipse 419.7 299.7 428.2 308.2 color -1;
+     terminals
+      p 424 304 fixed;
+      p 424 304 fixed;
+      p 424 304 fixed;
+      p 424 304 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node2 295.9 223.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 292.8 220.8 299.2 227.2 color -1 fill 0;
+      ellipse 291.7 219.7 300.2 228.2 color -1;
+     terminals
+      p 296 224 fixed;
+      p 296 224 fixed;
+      p 296 224 fixed;
+      p 296 224 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node20 679.9 231.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 676.8 228.8 683.2 235.2 color -1 fill 0;
+      ellipse 675.7 227.7 684.2 236.2 color -1;
+     terminals
+      p 680 232 fixed;
+      p 680 232 fixed;
+      p 680 232 fixed;
+      p 680 232 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node3 295.9 119.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 292.8 116.8 299.2 123.2 color -1 fill 0;
+      ellipse 291.7 115.7 300.2 124.2 color -1;
+     terminals
+      p 296 120 fixed;
+      p 296 120 fixed;
+      p 296 120 fixed;
+      p 296 120 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node5 527.9 327.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 524.8 324.8 531.2 331.2 color -1 fill 0;
+      ellipse 523.7 323.7 532.2 332.2 color -1;
+     terminals
+      p 528 328 fixed;
+      p 528 328 fixed;
+      p 528 328 fixed;
+      p 528 328 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node6 319.9 223.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 316.8 220.8 323.2 227.2 color -1 fill 0;
+      ellipse 315.7 219.7 324.2 228.2 color -1;
+     terminals
+      p 320 224 fixed;
+      p 320 224 fixed;
+      p 320 224 fixed;
+      p 320 224 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node7 679.9 63.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 676.8 60.8 683.2 67.2 color -1 fill 0;
+      ellipse 675.7 59.7 684.2 68.2 color -1;
+     terminals
+      p 680 64 fixed;
+      p 680 64 fixed;
+      p 680 64 fixed;
+      p 680 64 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node8 423.9 63.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 420.8 60.8 427.2 67.2 color -1 fill 0;
+      ellipse 419.7 59.7 428.2 68.2 color -1;
+     terminals
+      p 424 64 fixed;
+      p 424 64 fixed;
+      p 424 64 fixed;
+      p 424 64 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   Node9 471.9 63.9
+    description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Components\Node.emx</LibraryPath>
+  <TimeStamp>2007-9-27 11:10:6</TimeStamp>
+</Description>';
+    knot Node
+     ports
+      electric knot psi duplicatable none p [1];
+    end;
+    icon bg ellipse
+     figures
+      ellipse 468.8 60.8 475.2 67.2 color -1 fill 0;
+      ellipse 467.7 59.7 476.2 68.2 color -1;
+     terminals
+      p 472 64 fixed;
+      p 472 64 fixed;
+      p 472 64 fixed;
+      p 472 64 fixed;
+    end;
+    implementation eq
+equations
+	sum (direct (p.t)) = 0;
+	equal (collect (p.a));
+  implementation_end;
+   R1 240 120
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 216 120 264 120;
+      rectangle 224 112 256 128 fill 16777215;
+     terminals
+      p high 216 120 fixed;
+      p low 264 120 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 0.08 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   R2 248 224
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 224 224 272 224;
+      rectangle 232 216 264 232 fill 16777215;
+     terminals
+      p high 224 224 fixed;
+      p low 272 224 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 0.08 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   R3 248 328
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 224 328 272 328;
+      rectangle 232 320 264 336 fill 16777215;
+     terminals
+      p high 224 328 fixed;
+      p low 272 328 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 0.08 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   RL 784 152
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 784 128 784 176;
+      rectangle 776 136 792 168 fill 16777215;
+     terminals
+      p high 784 128 fixed;
+      p low 784 176 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 7.07 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   RL1 864 152
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 864 128 864 176;
+      rectangle 856 136 872 168 fill 16777215;
+     terminals
+      p high 864 128 fixed;
+      p low 864 176 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 7.07 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   RL2 824 264
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Resistor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:20</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type Resistor
+     ports
+      electric delta in p;
+    end;
+    icon ipm bottom
+     figures
+      line 824 288 824 240;
+      rectangle 816 248 832 280 fill 16777215;
+     terminals
+      p high 824 288 fixed;
+      p low 824 240 fixed;
+    end;
+    implementation eq
+parameters
+	real R = 7.07 {ohm};		// resistance
+equations
+	p.u = R * p.i;
+      implementation_end;
+   Transformador1 576 80.5
+			specifications active 'default'
+				specification 'default'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath><TimeStamp>2007-9-25 11:58:38</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   group
+    line 573.3 65.4 573.3 109.2;
+    line 578.7 65.4 578.7 109.2;
+   end;
+   text 'n : 1' 575 54 color 16711680 14;
+   line 560 64 568 64 568 112 560 112;
+   line 592 112 584 112 584 64 592 64;
+  terminals
+   p_1 high 560 64 fixed;
+   p_1 low 560 112 fixed;
+   p_2 high 592 64 fixed;
+   p_2 low 592 112 fixed;
+ end;
+ implementation eq
+parameters
+	real n = 1.0 {};		// turns ratio []
+equations
+	p_1.u = n * p_2.u;
+	p_2.i = n * p_1.i;           implementation_end;
+specification_end;
+				specification 'induction'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+  <LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath>
+  <TimeStamp>2007-9-24 20:22:16</TimeStamp>
+</Description>
+';
+ library_path 'Iconic Diagrams\Electric\Components\Transformer.emx';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   line 109 84.7 109 124.7;
+   line 115 84.7 115 124.7;
+   ellipse 100 88 108 96;
+   ellipse 100 96 108 104;
+   ellipse 100 104 108 112;
+   ellipse 100 112 108 120;
+   ellipse 116 88 124 96;
+   ellipse 116 96 124 104;
+   ellipse 116 104 124 112;
+   ellipse 116 112 124 120;
+   rectangle 120.5 87.7 125.7 121 color -1 fill 16777215;
+   rectangle 97.8 87.5 103.2 120.8 color -1 fill 16777215;
+   line 128 80 120 80 120 88;
+   line 128 128 120 128 120 120;
+   line 96 128 104 128 104 120;
+   line 96 80 104 80 104 88;
+  terminals
+   p_1 high 96 80 fixed;
+   p_1 low 96 128 fixed;
+   p_2 high 128 80 fixed;
+   p_2 low 128 128 fixed;
+ end;
+ implementation eq
+parameters
+	real M {H};		// coupling inductance
+	real L1 {H};		// primary inductance
+	real L2 {H};		// secondary inductance
+equations
+	p_1.u = L1*ddt (p_1.i) +  M * ddt (p_2.i);
+  	p_2.u = M *ddt (p_1.i) + L2 * ddt (p_2.i);              implementation_end;
+specification_end;
+			end;
+   Transformador2 576 248.5
+			specifications active 'default'
+				specification 'default'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath><TimeStamp>2007-9-25 11:58:38</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   group
+    line 573.3 233.4 573.3 277.2;
+    line 578.7 233.4 578.7 277.2;
+   end;
+   text 'n : 1' 575 222 color 16711680 14;
+   line 560 232 568 232 568 280 560 280;
+   line 592 280 584 280 584 232 592 232;
+  terminals
+   p_1 high 560 232 fixed;
+   p_1 low 560 280 fixed;
+   p_2 high 592 232 fixed;
+   p_2 low 592 280 fixed;
+ end;
+ implementation eq
+parameters
+	real n = 1.0 {};		// turns ratio []
+equations
+	p_1.u = n * p_2.u;
+	p_2.i = n * p_1.i;           implementation_end;
+specification_end;
+				specification 'induction'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+  <LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath>
+  <TimeStamp>2007-9-24 20:22:16</TimeStamp>
+</Description>
+';
+ library_path 'Iconic Diagrams\Electric\Components\Transformer.emx';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   line 109 84.7 109 124.7;
+   line 115 84.7 115 124.7;
+   ellipse 100 88 108 96;
+   ellipse 100 96 108 104;
+   ellipse 100 104 108 112;
+   ellipse 100 112 108 120;
+   ellipse 116 88 124 96;
+   ellipse 116 96 124 104;
+   ellipse 116 104 124 112;
+   ellipse 116 112 124 120;
+   rectangle 120.5 87.7 125.7 121 color -1 fill 16777215;
+   rectangle 97.8 87.5 103.2 120.8 color -1 fill 16777215;
+   line 128 80 120 80 120 88;
+   line 128 128 120 128 120 120;
+   line 96 128 104 128 104 120;
+   line 96 80 104 80 104 88;
+  terminals
+   p_1 high 96 80 fixed;
+   p_1 low 96 128 fixed;
+   p_2 high 128 80 fixed;
+   p_2 low 128 128 fixed;
+ end;
+ implementation eq
+parameters
+	real M {H};		// coupling inductance
+	real L1 {H};		// primary inductance
+	real L2 {H};		// secondary inductance
+equations
+	p_1.u = L1*ddt (p_1.i) +  M * ddt (p_2.i);
+  	p_2.u = M *ddt (p_1.i) + L2 * ddt (p_2.i);              implementation_end;
+specification_end;
+			end;
+   Transformador3 576 344.5
+			specifications active 'default'
+				specification 'default'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath><TimeStamp>2007-9-25 11:58:38</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   group
+    line 573.3 329.4 573.3 373.2;
+    line 578.7 329.4 578.7 373.2;
+   end;
+   text 'n : 1' 575 318 color 16711680 14;
+   line 560 328 568 328 568 376 560 376;
+   line 592 376 584 376 584 328 592 328;
+  terminals
+   p_1 high 560 328 fixed;
+   p_1 low 560 376 fixed;
+   p_2 high 592 328 fixed;
+   p_2 low 592 376 fixed;
+ end;
+ implementation eq
+parameters
+	real n = 1.0 {};		// turns ratio []
+equations
+	p_1.u = n * p_2.u;
+	p_2.i = n * p_1.i;           implementation_end;
+specification_end;
+				specification 'induction'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+  <LibraryPath>Iconic Diagrams\Electric\Components\Transformer.emx</LibraryPath>
+  <TimeStamp>2007-9-24 20:22:16</TimeStamp>
+</Description>
+';
+ library_path 'Iconic Diagrams\Electric\Components\Transformer.emx';
+ type Transformer
+  ports
+   electric delta in p_1;
+   electric delta out p_2;
+  restrictions
+   causality constraint not_equal p_1 p_2;
+ end;
+ icon ipm bottom
+  figures
+   line 109 84.7 109 124.7;
+   line 115 84.7 115 124.7;
+   ellipse 100 88 108 96;
+   ellipse 100 96 108 104;
+   ellipse 100 104 108 112;
+   ellipse 100 112 108 120;
+   ellipse 116 88 124 96;
+   ellipse 116 96 124 104;
+   ellipse 116 104 124 112;
+   ellipse 116 112 124 120;
+   rectangle 120.5 87.7 125.7 121 color -1 fill 16777215;
+   rectangle 97.8 87.5 103.2 120.8 color -1 fill 16777215;
+   line 128 80 120 80 120 88;
+   line 128 128 120 128 120 120;
+   line 96 128 104 128 104 120;
+   line 96 80 104 80 104 88;
+  terminals
+   p_1 high 96 80 fixed;
+   p_1 low 96 128 fixed;
+   p_2 high 128 80 fixed;
+   p_2 low 128 128 fixed;
+ end;
+ implementation eq
+parameters
+	real M {H};		// coupling inductance
+	real L1 {H};		// primary inductance
+	real L2 {H};		// secondary inductance
+equations
+	p_1.u = L1*ddt (p_1.i) +  M * ddt (p_2.i);
+  	p_2.u = M *ddt (p_1.i) + L2 * ddt (p_2.i);              implementation_end;
+specification_end;
+			end;
+   V1 152 119.1
+			specifications active 'AC'
+				specification 'AC'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   group
+    line 173 112 165 112;
+    line 169 108 169 116;
+   end;
+   line 176 120 128 120;
+   ellipse 140.4 108.9 162.7 131.3 fill 16777215;
+   spline 152.2 112.1 157.9 117.4 146.9 122.7 152.2 127.9;
+  terminals
+   p high 176 120 fixed;
+   p low 128 120 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 110.0 {V};		// voltage
+	real f = 60.0 {Hz};			// frequency
+variables
+	real hidden current {A};
+equations
+	p.u = U * sin ( 2 * pi * f * time );
+   	current = p.i;implementation_end;
+specification_end;
+				specification 'DC'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   line 343 200 343 248;
+   ellipse 332.3 213.3 354.7 235.7 fill 16777215;
+   line 332.2 206.4 339.7 206.4;
+   line 335.4 203.2 335.4 210.7;
+  terminals
+   p high 343 200 fixed;
+   p low 343 248 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 1 {V};		// voltage
+variables
+	real hidden current {A};
+equations
+	p.u = U;
+	current = p.i;             implementation_end;
+specification_end;
+			end;
+   V2 152 223.1
+			specifications active 'AC'
+				specification 'AC'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   group
+    line 173 216 165 216;
+    line 169 212 169 220;
+   end;
+   line 176 224 128 224;
+   ellipse 140.3 212.9 162.7 235.3 fill 16777215;
+   spline 152.2 216.1 157.8 221.4 146.8 226.7 152.2 231.9;
+  terminals
+   p high 176 224 fixed;
+   p low 128 224 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 110.0 {V};		// voltage
+	real f = 60.0 {Hz};			// frequency
+variables
+	real hidden current {A};
+equations
+	p.u = U * sin ( 2 * pi * f * time - 2* pi / 3);
+   	current = p.i;implementation_end;
+specification_end;
+				specification 'DC'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   line 343 200 343 248;
+   ellipse 332.3 213.3 354.7 235.7 fill 16777215;
+   line 332.2 206.4 339.7 206.4;
+   line 335.4 203.2 335.4 210.7;
+  terminals
+   p high 343 200 fixed;
+   p low 343 248 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 1 {V};		// voltage
+variables
+	real hidden current {A};
+equations
+	p.u = U;
+	current = p.i;             implementation_end;
+specification_end;
+			end;
+   V3 152 327.1
+			specifications active 'AC'
+				specification 'AC'
+ description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath><TimeStamp>2008-1-24 10:10:10</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   group
+    line 173 320 165 320;
+    line 169 316 169 324;
+   end;
+   line 176 328 128 328;
+   ellipse 140.3 316.9 162.7 339.3 fill 16777215;
+   spline 152.2 320.1 157.8 325.4 146.8 330.7 152.2 335.9;
+  terminals
+   p high 176 328 fixed;
+   p low 128 328 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 110.0 {V};		// voltage
+	real f = 60.0 {Hz};			// frequency
+variables
+	real hidden current {A};
+equations
+	p.u = U * sin ( 2 * pi * f * time + 2* pi / 3);
+   	current = p.i;implementation_end;
+specification_end;
+				specification 'DC'
+description '<Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues>
+   <LibraryPath>Iconic Diagrams\Electric\Sources\VoltageSource.emx</LibraryPath>
+  <TimeStamp>2008-1-24 10:10:10</TimeStamp>
+</Description>';
+ type VoltageSource
+  ports
+   electric delta out p;
+  restrictions
+   causality fixed out p;
+ end;
+ icon bg bottom
+  figures
+   line 343 200 343 248;
+   ellipse 332.3 213.3 354.7 235.7 fill 16777215;
+   line 332.2 206.4 339.7 206.4;
+   line 335.4 203.2 335.4 210.7;
+  terminals
+   p high 343 200 fixed;
+   p low 343 248 fixed;
+ end;
+ implementation eq
+parameters
+	real U = 1 {V};		// voltage
+variables
+	real hidden current {A};
+equations
+	p.u = U;
+	current = p.i;             implementation_end;
+specification_end;
+			end;
+   Voltimetro1 295.4 160
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\VoltageSensor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:46</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type VoltageSensor
+     ports
+      electric delta in p;
+      signal out u {V} ;
+     restrictions
+      causality fixed in p;
+    end;
+    icon bg bottom
+     figures
+      group
+       line 287.9 139.2 287.9 146.7;
+       line 284.7 142.4 292.2 142.4;
+      end;
+      line 296 136 296 184;
+      ellipse 284.8 149.3 307.2 171.7 fill 16777215;
+      text 'u' 296 159.5 15;
+      line 284.7 176.5 292.2 176.5;
+     terminals
+      p high 296 136 fixed;
+      p low 296 184 fixed;
+    end;
+    implementation eq
+equations
+	p.i = 0;
+	u = p.u;             implementation_end;
+   Voltimetro2 319.4 280
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\VoltageSensor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:46</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type VoltageSensor
+     ports
+      electric delta in p;
+      signal out u {V} ;
+     restrictions
+      causality fixed in p;
+    end;
+    icon bg bottom
+     figures
+      group
+       line 311.9 259.2 311.9 266.7;
+       line 308.7 262.4 316.2 262.4;
+      end;
+      line 320 256 320 304;
+      ellipse 308.8 269.3 331.2 291.7 fill 16777215;
+      text 'u' 320 279.5 15;
+      line 308.7 296.5 316.2 296.5;
+     terminals
+      p high 320 256 fixed;
+      p low 320 304 fixed;
+    end;
+    implementation eq
+equations
+	p.i = 0;
+	u = p.u;             implementation_end;
+   Voltimetro3 424.5 248
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\VoltageSensor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:46</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type VoltageSensor
+     ports
+      electric delta in p;
+      signal out u {V} ;
+     restrictions
+      causality fixed in p;
+    end;
+    icon bg bottom
+     figures
+      group
+       line 432 268.8 432 261.3;
+       line 435.3 265.6 427.8 265.6;
+      end;
+      line 424 272 424 224;
+      ellipse 412.8 236.3 435.2 258.7 fill 16777215;
+      text 'u' 424 248.5 15;
+      line 435.3 231.5 427.8 231.5;
+     terminals
+      p high 424 272 fixed;
+      p low 424 224 fixed;
+    end;
+    implementation eq
+equations
+	p.i = 0;
+	u = p.u;             implementation_end;
+   Voltimetro4 679.4 144
+    description '<Information><Description><Version>4.0</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Iconic Diagrams\Electric\Components\VoltageSensor.emx</LibraryPath><TimeStamp>2007-9-25 11:58:46</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
+    type VoltageSensor
+     ports
+      electric delta in p;
+      signal out u {V} ;
+     restrictions
+      causality fixed in p;
+    end;
+    icon bg bottom
+     figures
+      group
+       line 671.9 123.2 671.9 130.7;
+       line 668.7 126.4 676.2 126.4;
+      end;
+      line 680 120 680 168;
+      ellipse 668.8 133.3 691.2 155.7 fill 16777215;
+      text 'u' 680 143.5 15;
+      line 668.7 160.5 676.2 160.5;
+     terminals
+      p high 680 120 fixed;
+      p low 680 168 fixed;
+    end;
+    implementation eq
+equations
+	p.i = 0;
+	u = p.u;             implementation_end;
+  end;
+  connections
+   V3\p_low <= Node1\p 88 328;
+   Node13\p => Transformador2\p_2_low;
+   Transformador1\p_2_low <= Node13\p 632 112;
+   Node8\p => Node9\p;
+   Node12\p => Transformador2\p_1_high;
+   Node13\p => Transformador3\p_2_low 632 376;
+   Node2\p => Node6\p;
+   V2\p_low <= Node1\p;
+   R3\p_low => Node14\p;
+   Node6\p => Node12\p 400 224 400 192 528 192;
+   Node14\p => Node15\p 344 328 344 304;
+   RL\p_low => Node10\p;
+   Voltimetro2\p_high <= Node6\p;
+   Node3\p => Voltimetro1\p_high;
+   Voltimetro1\p_low => Node2\p;
+   Node9\p => Transformador1\p_1_high;
+   Voltimetro2\p_low => Node14\p;
+   Node15\p => Node5\p 528 304;
+   Node8\p <= Voltimetro3\p_low;
+   Voltimetro3\p_high <= Node15\p;
+   V1\p_high => R1\p_high;
+   V3\p_high => R3\p_high;
+   RL1\p_low => Node10\p;
+   Ground\p => Node1\p 32 224 88 224;
+   R2\p_high <= V2\p_high;
+   R1\p_low => Node3\p;
+   Node3\p => Node8\p 344 120 344 64;
+   R2\p_low => Node2\p;
+   Node7\p => Voltimetro4\p_high;
+   Node20\p => RL\p_high 728 232 728 104 784 104;
+   Voltimetro4\p_low => Node20\p;
+   Transformador1\p_1_low => Node12\p 480 112 480 232;
+   Transformador2\p_1_low => Node5\p 496 280 496 328;
+   Node1\p => V1\p_low 88 120;
+   Node9\p <= Transformador3\p_1_low 472 376;
+   Node5\p => Transformador3\p_1_high;
+   Transformador3\p_2_high => RL2\p_high 824 328;
+   Ground2\p => Node13\p;
+   Node10\p <= RL2\p_low;
+   Node10\p => Ground1\p 968 208;
+   Transformador1\p_2_high => Node7\p;
+   Node7\p => RL1\p_high 864 64;
+   Transformador2\p_2_high => Node20\p;
+  end;
+ implementation_end;
+]]>
+</Sidops>
+ </Model>
+ <Experiments>
+     <DefaultExperiment><![CDATA[Experiment 1]]>
+</DefaultExperiment>
+  <Experiment>
+    <Name>Experiment 1</Name>
+    <CreatedBy></CreatedBy>
+    <Info></Info>
+<ExpData>
+  <VersionNumber>4.5</VersionNumber>
+  <ModelProperties>
+    <ModelProperty section="tools\graph editor" entry="showOrientation" value="1"/>
+  </ModelProperties>
+  <Variables>
+   <Constants>
+   </Constants>
+   <Parameters>
+   </Parameters>
+  </Variables>
+  <PlotSpecs>
+   <VarNames>
+    <VarName>time</VarName>
+    <VarName>Transformador1\p_1.u</VarName>
+    <VarName>Transformador1\p_2.u</VarName>
+    <VarName>Voltimetro1\u</VarName>
+    <VarName>Voltimetro4\u</VarName>
+    <VarName>Transformador1\p_1.i</VarName>
+    <VarName>V1\p.i</VarName>
+   </VarNames>
+   <Plots>
+    <Plot>
+     <PlotType>GraphPlot</PlotType>
+     <BasePlot>
+       <PlotId>1</PlotId>
+       <UseWindowsBGColor>true</UseWindowsBGColor>
+       <BGColor>15790320</BGColor>
+       <PlotIsVisible>true</PlotIsVisible>
+     </BasePlot>
+     <Grid>
+      <DrawGrid>true</DrawGrid>
+      <GridColor>15780518</GridColor>
+      <XTicks>10</XTicks>
+      <YTicks>10</YTicks>
+      <ZTicks>10</ZTicks>
+      <Use3DLook>false</Use3DLook>
+     </Grid>
+     <PlotBGColor>16777215</PlotBGColor>
+     <ShowPlotTitle>true</ShowPlotTitle>
+     <TitlePosition>1</TitlePosition>
+     <PlotTitle>model</PlotTitle>
+     <ShowXValues>true</ShowXValues>
+     <Fonts>
+      <TitleFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </TitleFont>
+      <LabelFont>
+       <Name>Arial</Name>
+       <Height>12</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </LabelFont>
+      <ValuesFont>
+       <Name>Arial</Name>
+       <Height>10</Height>
+       <PitchFamily>34</PitchFamily>
+       <Weight>400</Weight>
+       <Italic>0</Italic>
+       <UnderLine>0</UnderLine>
+       <StrikeOut>0</StrikeOut>
+       <Color>0</Color>
+      </ValuesFont>
+     </Fonts>
+     <SharedXAxis>true</SharedXAxis>
+     <SharedYAxis>true</SharedYAxis>
+     <SharedZAxis>false</SharedZAxis>
+     <XAxes>
+      <Axis>
+       <Minimum>-0.04</Minimum>
+       <Maximum>0.16</Maximum>
+       <Linear>true</Linear>
+       <Scaling>2</Scaling>
+       <Label>time</Label>
+      </Axis>
+     </XAxes>
+     <YAxes>
+      <Axis>
+       <Minimum>-500</Minimum>
+       <Maximum>500</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Tens&atilde;o fase 1&ordm;</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-500</Minimum>
+       <Maximum>500</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Tens&atilde;o fase 2&ordm;</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-500</Minimum>
+       <Maximum>500</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Tens&atilde;o linha 1&ordm;</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-500</Minimum>
+       <Maximum>500</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Tens&atilde;o linha 2&ordm;</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-500</Minimum>
+       <Maximum>500</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Corrente fase 1&ordm;</Label>
+      </Axis>
+      <Axis>
+       <Minimum>-500</Minimum>
+       <Maximum>500</Maximum>
+       <Linear>true</Linear>
+       <Scaling>1</Scaling>
+       <Label>Corrente linha 1&ordm;</Label>
+      </Axis>
+     </YAxes>
+     <ZAxes>
+     </ZAxes>
+     <Curves>
+      <Curve>
+       <LineColor>16711680</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711680</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>false</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Transformador1\p_1.u</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>16711935</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>16711935</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>false</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Transformador1\p_2.u</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>255</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>255</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Voltimetro1\u</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>65280</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>65280</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>true</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Voltimetro4\u</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>0</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>0</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>false</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>Transformador1\p_1.i</VarName>
+       </YCurveData>
+      </Curve>
+      <Curve>
+       <LineColor>10040319</LineColor>
+       <LineStyle>1</LineStyle>
+       <TickColor>10040319</TickColor>
+       <TickStyle>0</TickStyle>
+       <CurveVisible>false</CurveVisible>
+       <PixelThresshold>1</PixelThresshold>
+       <LineThickness>1</LineThickness>
+       <LineOrder>1</LineOrder>
+       <ShowYValues>true</ShowYValues>
+       <XCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>time</VarName>
+       </XCurveData>
+       <YCurveData>
+        <ShowUnit>true</ShowUnit>
+        <VarName>V1\p.i</VarName>
+       </YCurveData>
+      </Curve>
+     </Curves>
+     <Legenda>
+      <ShowLegenda>true</ShowLegenda>
+     </Legenda>
+    </Plot>
+   </Plots>
+   <PlotPanels>
+    <PlotPanel>
+     <PlotPanelId>1</PlotPanelId>
+     <PlotPanelVisible>true</PlotPanelVisible>
+     <Name>Window 1</Name>
+     <Tiling>0</Tiling>
+     <PlotIds>
+       <PlotId>1</PlotId>
+     </PlotIds>
+     <ToggleState>Base</ToggleState>
+    </PlotPanel>
+   </PlotPanels>
+   <WindowRectangles virtualDesktopWidth="1366" virtualDesktopHeight="768">
+     <WindowRectangle monitor="0" left="0" top="0" right="1366" bottom="768" plotpanelid="1">
+0.104685 0.0651042 0.915813 0.928385
+     </WindowRectangle>
+   </WindowRectangles>
+  </PlotSpecs>
+  <RunSpecs>
+   <SimulatorSettings>
+    <StartTime>0</StartTime>
+    <FinishTime>0.1</FinishTime>
+    <Warp>false</Warp>
+    <UseOutputAfterEach>false</UseOutputAfterEach>
+    <OutputAfterEach>0.1</OutputAfterEach>
+    <EventEpsilon>1e-006</EventEpsilon>
+    <AlgebraicTolerance>1e-007</AlgebraicTolerance>
+    <SteadyStateAnalysis>false</SteadyStateAnalysis>
+    <UpdateHoldInstructions>true</UpdateHoldInstructions>
+   </SimulatorSettings>
+   <IntegrationMethods>
+    <IntegrationMethod>
+     <Name>Euler</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BackwardEuler</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <StepSize>0.01</StepSize>
+     <Alpha>1</Alpha>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>AdamsBashforth</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta2</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta4</Name>
+     <StepSize>0.01</StepSize>
+     <AutoStepSize>false</AutoStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKutta8</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <SafetyFactor>0.9</SafetyFactor>
+     <Factor1>0.33</Factor1>
+     <Factor2>6</Factor2>
+     <Beta>0</Beta>
+     <UseMaxNrSteps>false</UseMaxNrSteps>
+     <MaxNrSteps>100000</MaxNrSteps>
+     <UseStiffDetection>false</UseStiffDetection>
+     <MaxNrStiffnessSteps>1000</MaxNrStiffnessSteps>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>RungeKuttaFehlberg</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>VodeAdams</Name>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <AbsoluteTolerance>1e-006</AbsoluteTolerance>
+     <RelativeTolerance>1e-006</RelativeTolerance>
+     <VodeUseBDF>true</VodeUseBDF>
+     <VodeUseNewton>true</VodeUseNewton>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>BDFMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <UseFixedStepSize>true</UseFixedStepSize>
+     <FixedStepSize>0.0001</FixedStepSize>
+    </IntegrationMethod>
+    <IntegrationMethod>
+     <Name>MeBDFiMethod</Name>
+     <AbsoluteTolerance>1e-005</AbsoluteTolerance>
+     <RelativeTolerance>1e-005</RelativeTolerance>
+     <AlgebraicAbsoluteTolerance>1e-005</AlgebraicAbsoluteTolerance>
+     <AlgebraicRelativeTolerance>1e-005</AlgebraicRelativeTolerance>
+     <UseInitialStepSize>false</UseInitialStepSize>
+     <InitialStepSize>0</InitialStepSize>
+     <UseMaximumStepSize>false</UseMaximumStepSize>
+     <MaximumStepSize>0</MaximumStepSize>
+     <UseFixedStepSize>false</UseFixedStepSize>
+     <FixedStepSize>0</FixedStepSize>
+    </IntegrationMethod>
+    <SelectedIntegrationMethod>8</SelectedIntegrationMethod>
+   </IntegrationMethods>
+  </RunSpecs>
+  <MultipleRun>
+   <NrSteps>10</NrSteps>
+   <CopyFromStates>false</CopyFromStates>
+   <JoinParameterVariation>true</JoinParameterVariation>
+   <ClearAfterRun>true</ClearAfterRun>
+   <RedrawAfterRun>false</RedrawAfterRun>
+   <DrawDuringSimulation>true</DrawDuringSimulation>
+   <ActionBeforeOptimization>0</ActionBeforeOptimization>
+   <CompareValue>0</CompareValue>
+   <UseCompareValue>true</UseCompareValue>
+   <MultipleRunType>MultipleRun</MultipleRunType>
+   <Minimize>true</Minimize>
+   <OptimizationVariable></OptimizationVariable>
+   <ResulVarUsage>UseEndValue</ResulVarUsage>
+   <Tolerance>0.001</Tolerance>
+   <OptimizationMethod>BroydonFletcherGoldfarbShanno</OptimizationMethod>
+   <MultipleRunVariables>
+   </MultipleRunVariables>
+  </MultipleRun>
+  <ExportData>
+   <WriteAsText>true</WriteAsText>
+   <ReadAsText>true</ReadAsText>
+   <WriteHeader>true</WriteHeader>
+   <ReadHeader>true</ReadHeader>
+   <ReadFilename></ReadFilename>
+   <WriteFilename></WriteFilename>
+   <DoWrite>false</DoWrite>
+   <ExportVariables>
+   </ExportVariables>
+   <ImportVariables>
+   </ImportVariables>
+  </ExportData>
+  <BreakPoints>
+  </BreakPoints>
+  <AnimationPlayback>
+   <PlaybackSpeed>1</PlaybackSpeed>
+  </AnimationPlayback>
+</ExpData>
+  </Experiment>
+</Experiments>
+</Document>

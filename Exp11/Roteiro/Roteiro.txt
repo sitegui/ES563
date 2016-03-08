@@ -1,0 +1,33 @@
+Roteiro
+
+1.1
+Ler Pré-Roteiro
+
+1.2
+Valores determinados no Ensaio em vazio do Pré-Roteiro
+
+Potência monofásica de entrada
+P1bl = Pbl/3?
+
+2.1
+Valores determinados no Ensaio rotor Bloqueado do Pré-Roteiro
+
+Znl = R1 + jXnl ??
+
+2.2
+Desenhar modelo dado na Fig1 do Pré-Roteiro substituido os valores
+
+3.1
+Neste primeiro item é  Velocidade A VAZIO
+
+3.2
+Medir
+
+3.3
+Medir
+
+3.4
+Regulação de velocidade para a maior carga
+Qual é a maior carga??
+
+Reg = [(3.1)-(3.2)]/3.2*100% ??

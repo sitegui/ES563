@@ -1,0 +1,4 @@
+Campo(d) = 267.75*exp(-0.252*d)
+
+Campo em mT
+d em mm

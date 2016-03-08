@@ -1,0 +1,50 @@
+Ensaio em Vazio
+
+1. Tensão nominal do motor = 
+
+V = 
+
+2. Meça a resistência de uma fase do moto(usar multimetro) 
+
+R1 = 
+
+3. Ligue o motor, sem qualquer carga acoplada ao seu eixo, alimentando-o com a sua
+voltagem e frequência nominais.
+4. Espere 10 minutos para que o motor atinja sua temperatura de trabalho.
+
+5. Meça a voltagem entre fase e neutro de uma das fases do motor caso tenha acesso ao
+neutro. Alternativamente, meça a voltagem entre fases e calcule a voltagem fase-neutro,
+dividindo-a por "sqrt(3)" (Obs: o subscrito nl significa “no-load” (sem carga)). Ou ainda, meça
+a potência trifásica utilizando o método dos dois watímetros.
+
+V1,nl = 
+
+
+6. Meça a corrente dessa mesma fase = 
+
+I1,nl =
+
+7. Calcule a potência de entrada da fase do motor:
+
+Pn1 = V1,nl * I1,nl = 
+(Obs: Isso não é Snl??)
+
+
+Cálculos:
+
+1)
+Pnl =
+(medir com o "método dos 2 wattimetros")
+
+2) 
+Prot = Pnl - nph*R1*(I1nl)^2 = Pnl - 3*R1*(I1nl)^2
+(Potencia total real - "perdas nas fases")
+
+3)
+Snl = 3* V1,nl * I1,nl = 3*Pn1 = 
+
+4)
+Qnl = sqrt(Snl^2 - Pnl^2) = 
+
+5)
+Xnl = Qnl/(nph*(I1,nl)^2) = Qnl/[3*(I1,nl^2)]

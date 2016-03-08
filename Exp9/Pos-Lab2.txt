@@ -1,0 +1,9 @@
+Temp_motor(t) = RthxReqxI^2(1-exp(-t/tth) + Temp_Amb
+
+Rth = 3K/W = 3C/W
+Req = Ra + Rh = 0.4845 + 0.72 = 1.2045ohm
+I^2 = (1.5A)^2 (Ensaio 2)
+Temp_Amb = 26C
+tth = 2,9s
+
+Temp_motor(t) = 8,13[1-exp(-t/2,9)] + 26

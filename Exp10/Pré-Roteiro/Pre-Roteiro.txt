@@ -1,0 +1,8 @@
+Incluir diagrama obtido e comentar sobre o comportamento esperado do motor a partir deste.
+
+
+Comentário:
+O torque cresce exponencialmente com a velocidade até seu máximo, a partir do qual cai drasticamente com o aumento da velocidade.
+Quando o rotor atinge a velocidade do campo girante,
+o torque induzido no rotor é zero, pois não há o escorregamento(wr-ws=0), e para velocidades maiores a partir desse ponto
+(wr > ws) a direção do torque induzido se inverteria e o rotor se tornaria um gerador de indução (torque_rotor < 0).

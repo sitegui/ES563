@@ -1,0 +1,2 @@
+x-component: 0.00584975 N
+y-component: -10.2961 N

@@ -1,0 +1,5 @@
+Forças
+x-component: 0.0338657 N
+y-component: 10.5327 N
+
+Torque about (0,0): -0.00025608 N*m

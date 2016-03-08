@@ -1,0 +1,5 @@
+Medir velocidade com o tacômetro:
+wm = 
+
+Medir tensão gerada nos terminais do motor DC:
+Vdc = 

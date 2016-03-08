@@ -1,0 +1,15 @@
+A regulação de velocidade de um motor é definida como a variação da velocidade 
+desde a plena carga até a situação de carga nula, expressa em porcentagem da velocidade nominal(carga máxima):
+
+Reg = [(Vsc - Vcm)/Vcm]x100%
+
+Vsc = Velocidade sem carga
+Vcm = Velocidade com carga máxima
+
+Assumindo os dados da tabela 8 - simulação 6:
+
+Vsc = V(450,53u) = 230rad/s
+Vcm = V(750,53u) = 207rad/s
+
+Reg = [(230 - 207)/207]x100%
+Reg = 11,1%

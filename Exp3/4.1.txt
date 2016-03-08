@@ -1,0 +1,14 @@
+Nos transformadores ocorrem dois tipo de perdas:
+
+Perdas no cobre e perdas no ferro
+
+As perdas no cobre são devidas à resistência à corrente que passa pelo enrolamento do transformador.
+As perdas no ferro são causadas por efeitos indesejados do campo eletromagnético que envolve o núcleo ferromagnético.
+Estas são perdas por histerese e perdas pelas correntes de Focault(correntes parasitas).
+
+De fato, por aplicarmos uma tensão reduzida no ensaio de curto-circuito, o fluxo magnético também será reduzido.
+Assim, as perdas no ferro podem ser desprezadas.
+
+Entretanto, Miraguaia afirma que "as perdas podem ser desprezadas", dando a entender que todas as perdas são desprezadas.
+
+Como exposto, as perdas no ferro são desprezadas, mas as no cobre não são.
